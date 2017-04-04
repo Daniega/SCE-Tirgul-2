@@ -30,9 +30,7 @@ def index():
         return redirect(url_for('login'))
     g.user = current_user #global user parameter used by flask framwork
     parties = Party.query.all()
-    return render_template('index.html',
-                           title='Home',
-                           user=g.user,
+    return render_template('index.html', title='Home', user=g.user,
                            parties=parties)
 
 
@@ -40,19 +38,22 @@ def index():
 def login():
     error = None
     if request.method == 'POST':
-
         ## Validate user
         first_name = request.form['first_name']
-        if first_name == "tomer":
-            user = User.query.filter_by(first_name=first_name).first()
+        last_name = request.form['last_name']
+        id_number = request.form['id_number']
+        check_db = User.query.filter_by(id_number=id_number).first()
+        if check_db == None:
+            error = u'המצביע אינו מופיע בבסיס הנתונים'
+        elif first_name == check_db.first_name and last_name == check_db.last_name and id_number == check_db.id_number:
+            user = User.query.filter_by(id_number=id_number).first()
             login_user(user)  ## built in 'flask login' method that creates a user session
             return redirect(url_for('index'))
 
         else: ##validation error
             error = u'המצביע אינו מופיע בבסיס הנתונים'
 
-    return render_template('login.html',
-                           error=error)
+    return render_template('login.html', error=error)
 
 
 ## will handle the logout request
