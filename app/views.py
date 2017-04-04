@@ -67,7 +67,7 @@ def logout():
 @app.route('/secret', methods=['GET'])
 @login_required
 def secret():
-    return 'This is a secret page. You are logged in as {} {}'.format(current_user.first_name, current_user.last_name)
+    return 'This is a secret page. You are logged in as {} {} {}'.format(current_user.first_name, current_user.last_name, current_user.id_number)
 
 
 ## will handle the site icon - bonus 2 points for creative new icon
