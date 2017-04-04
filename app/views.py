@@ -46,8 +46,8 @@ def login():
         if check_db == None:
             error = u'המצביע אינו מופיע בבסיס הנתונים'
         elif first_name == check_db.first_name and last_name == check_db.last_name and id_number == check_db.id_number:
-            user = User.query.filter_by(id_number=id_number).first()
-            login_user(user)  ## built in 'flask login' method that creates a user session
+           # user = User.query.filter_by(id_number=id_number).first()
+            login_user(check_db)  ## built in 'flask login' method that creates a user session
             return redirect(url_for('index'))
 
         else: ##validation error
