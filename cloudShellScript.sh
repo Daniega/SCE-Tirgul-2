@@ -16,7 +16,7 @@ python2.7 get-pip.py
 #install git
 yum install git -y
 
-git clone https://github.com/markrity/SCE-Tirgul-2.git
+git clone https://github.com/Daniega/SCE-Tirgul-2.git
 
 cd SCE-Tirgul-2
 
