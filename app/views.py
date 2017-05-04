@@ -2,12 +2,11 @@
 
 import os
 
-from flask import render_template, flash, redirect, url_for, request, g
+from flask import render_template, redirect, url_for, request, g
 from flask import send_from_directory
 from flask_login import login_user, logout_user, current_user, login_required
 
 from app import app, login_manager
-from .forms import LoginForm
 from .models import User, Party
 from app import db
 
@@ -87,5 +86,5 @@ def secret():
 ## will handle the site icon - bonus 2 points for creative new icon
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico',
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'Realfavicon.ico',
                                mimetype='image/vnd.microsoft.icon')

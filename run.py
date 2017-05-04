@@ -1,4 +1,7 @@
-from flask import url_for
-
 from app import app
-app.run(host='0.0.0.0', port=1234 debug=True)
+from db_create import db_create
+from app import db
+
+db.drop_all()
+db_create()
+app.run(host='0.0.0.0', debug=True)
