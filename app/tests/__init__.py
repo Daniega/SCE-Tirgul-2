@@ -10,8 +10,6 @@ db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
-db.drop_all()
-db_create()
-app.run(host='0.0.0.0',port=5000,debug=True)
+
 
 

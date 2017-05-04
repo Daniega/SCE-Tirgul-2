@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
+
 from selenium import webdriver
 import unittest
 import os
 
 class test_web(unittest.TestCase):
     def test_login_selenium(self):
-        self.browser.get('http://localhost:5000/')
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('illya')
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('yurkevich')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('320880123')
@@ -16,6 +17,7 @@ class test_web(unittest.TestCase):
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('such')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('user')
         self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').click()
+        assert u'המצביע אינו מופיע בבסיס הנתונים' in self.browser.page_source
 
 
 
