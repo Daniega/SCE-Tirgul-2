@@ -63,7 +63,7 @@ def login():
 
             error = u'המצביע אינו מופיע בבסיס הנתונים'
 
-    return render_template('login.html', error=error)
+    return render_template('login.html', error=error),404
 
 
 ## will handle the logout request
