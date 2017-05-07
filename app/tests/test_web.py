@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 
-from selenium import webdriver
-import unittest
 import os
+import unittest
+
+from selenium import webdriver
+
+from app.tests import app
+
 
 class test_web(unittest.TestCase):
+
     def test_login_selenium(self):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('illya')
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('yurkevich')
@@ -22,6 +27,8 @@ class test_web(unittest.TestCase):
 
 
     def setUp(self):
+        self.tester = app.test_client(self)
+        self.tester.testing = True
         # some ****ing problem with chromedriver
         chromedriver = "/Users/illya/Downloads/chromedriver"
         os.environ["webdriver.chrome.driver"] = chromedriver
@@ -29,7 +36,8 @@ class test_web(unittest.TestCase):
         self.browser.get('http://localhost:5000/')
 
     def tearDown(self):
-        self.browser.close()
+        self.browser.quit()
+
 
 
 if __name__ == "__main__":

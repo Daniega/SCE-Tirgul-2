@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from app.models import User, Party
-from app import db
 
 class db_create():
-    def __init__(self):
+    def __init__(self,db):
         db.create_all()
-
         admon = User('tomer', 'admon', '111')
         tomer = User(u'תומר', u'אדמון', '111')
         daniel = User('daniel', 'gaishuber', '311958201')

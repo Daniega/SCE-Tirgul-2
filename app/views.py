@@ -7,8 +7,8 @@ from flask import send_from_directory
 from flask_login import login_user, logout_user, current_user, login_required
 
 from app import app, login_manager
-from .models import User, Party
 from app import db
+from .models import User, Party
 
 @login_manager.user_loader
 def load_user(user_id):

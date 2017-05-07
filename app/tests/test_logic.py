@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 import unittest
-from app import db
-import app
+
+from app import app
+from app.tests import test_db
 from db_create import db_create
 
 
 class myTest(unittest.TestCase):
-    TESTING = True
-    host = '0.0.0.0'
+
+    def create_app(self):
+        return app
 
     def auth_test(self):
         response = self.tester.get('/secret', content_type='application/json')
@@ -37,15 +39,14 @@ class myTest(unittest.TestCase):
 
 
     def setUp(self):
-        self.tester = app.app.test_client(self)
-        db.drop_all()
-        db_create()
-
-
+        self.tester = app.test_client(self)
+        test_db.drop_all()
+        db_create(test_db)
+        self.tester.testing = True
 
     def tearDown(self):
-        db.drop_all()
-        db.session.remove()
+        test_db.drop_all()
+        test_db.session.remove()
 
 
 if __name__ == '__main__':
