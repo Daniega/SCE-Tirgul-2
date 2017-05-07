@@ -2,9 +2,7 @@
 
 import os
 import unittest
-
 from selenium import webdriver
-
 from app.tests import app
 
 
