@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 import unittest
 from selenium import webdriver
-from app.tests import app
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class test_web(unittest.TestCase):
-
     def test_login_selenium(self):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('illya')
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('yurkevich')
@@ -20,15 +19,12 @@ class test_web(unittest.TestCase):
         self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').click()
         assert u'המצביע אינו מופיע בבסיס הנתונים' in self.browser.page_source
 
-
-
     def setUp(self):
-        self.browser = webdriver.Remote("http://127.0.1.0:5000", webdriver.DesiredCapabilities.CHROME.copy())
+        self.browser = webdriver.Remote("http://127.0.1.0:5000/", desired_capabilities={'browserName':'chrome'})
         self.browser = webdriver.Chrome()
 
     def tearDown(self):
         self.browser.quit()
-
 
 
 if __name__ == "__main__":
