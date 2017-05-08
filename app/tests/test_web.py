@@ -13,7 +13,6 @@ class test_web(unittest.TestCase):
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('yurkevich')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('320880123')
         self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').click()
-        print self.browser.find_element_by_xpath('/html/head/title')
         assert "No results found." not in self.browser.page_source
 
     def test_noSuchUser_selenium(self):
