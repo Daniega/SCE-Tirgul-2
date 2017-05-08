@@ -23,11 +23,8 @@ class test_web(unittest.TestCase):
 
 
     def setUp(self):
-        self.tester = app.test_client(self)
-        self.tester.testing = True
-        # some ****ing problem with chromedriver
         self.browser = webdriver.Chrome()
-        self.browser.get('http://localhost:5000/')
+        self.browser.get('http://127.0.0.1:5000/')
 
     def tearDown(self):
         self.browser.quit()
