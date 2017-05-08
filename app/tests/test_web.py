@@ -23,7 +23,7 @@ class test_web(unittest.TestCase):
 
 
     def setUp(self):
-        self.browser = webdriver.Remote("https://127.0.1.0:5000", webdriver.DesiredCapabilities.CHROME.copy())
+        self.browser = webdriver.Remote("http://127.0.1.0:5000", webdriver.DesiredCapabilities.CHROME.copy())
         self.browser = webdriver.Chrome()
 
     def tearDown(self):
