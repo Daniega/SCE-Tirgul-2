@@ -20,8 +20,12 @@ class test_web(unittest.TestCase):
         assert u'המצביע אינו מופיע בבסיס הנתונים' in self.browser.page_source
 
     def setUp(self):
-        self.browser = webdriver.Remote("http://127.0.1.0:5000/", desired_capabilities=DesiredCapabilities.EDGE)
-        self.browser = webdriver.Edge()
+        self.browser = webdriver.Remote("http://127.0.1.0:5000/", desired_capabilities= {
+          "browserName": "chrome",
+          "maxInstances": 1,
+          "seleniumProtocol": "WebDriver"
+        })
+        self.browser = webdriver.Chrome()
 
     def tearDown(self):
         self.browser.quit()
