@@ -26,7 +26,7 @@ class test_web(unittest.TestCase):
         self.tester = app.test_client(self)
         self.tester.testing = True
         # some ****ing problem with chromedriver
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Edge()
         self.browser.get('http://localhost:5000/')
 
     def tearDown(self):
