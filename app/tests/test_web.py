@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
 
 class test_web(unittest.TestCase):
@@ -8,7 +9,7 @@ class test_web(unittest.TestCase):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('illya')
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('yurkevich')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('320880123')
-        self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').click()
+        self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').send_keys(Keys.ENTER)
         print self.browser.current_url
         self.assertEqual('http://127.0.0.1:5000/login?next=%2F', self.browser.current_url)
 
