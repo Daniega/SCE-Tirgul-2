@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
 from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class test_web(unittest.TestCase):
@@ -20,7 +19,7 @@ class test_web(unittest.TestCase):
         assert u'המצביע אינו מופיע בבסיס הנתונים' in self.browser.page_source
 
     def setUp(self):
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Chrome()
         self.browser.get("http://127.0.0.1:5000")
 
 
