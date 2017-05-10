@@ -2,6 +2,8 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+
 
 
 class test_web(unittest.TestCase):
@@ -21,7 +23,10 @@ class test_web(unittest.TestCase):
         assert "Flask Intro - login page" in self.browser.title
 
     def setUp(self):
-        self.browser = webdriver.Firefox()
+        capabilities = webdriver.DesiredCapabilities().FIREFOX
+        capabilities["marionette"] = False
+        binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox')
+        driver = webdriver.Firefox(firefox_binary=binary, capabilities=capabilities)
         self.browser.implicitly_wait(5)
         self.browser.get("http://127.0.0.1:5000")
 

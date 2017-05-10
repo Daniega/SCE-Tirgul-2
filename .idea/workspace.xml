@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="">
+    <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="build #9324923942394392">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/test_web.py" afterPath="$PROJECT_DIR$/app/tests/test_web.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +16,7 @@
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_logic_myTest.coverage" NAME="Unittests for app.tests.test_logic.myTest Coverage Results" MODIFIED="1493905127266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_in_test_web_py.coverage" NAME="Unittests in test_web.py Coverage Results" MODIFIED="1494431452688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_tearDown.coverage" NAME="Unittests for app.tests.test_web.test_web.tearDown Coverage Results" MODIFIED="1494431634826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web.coverage" NAME="Unittests for app.tests.test_web.test_web Coverage Results" MODIFIED="1494432429295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web.coverage" NAME="Unittests for app.tests.test_web.test_web Coverage Results" MODIFIED="1494433871980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_test_noSuchUser_selenium.coverage" NAME="Unittests for app.tests.test_web.test_web.test_noSuchUser_selenium Coverage Results" MODIFIED="1494431619734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$db_create.coverage" NAME="db_create Coverage Results" MODIFIED="1494145051345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_test_login_selenium.coverage" NAME="Unittests for app.tests.test_web.test_web.test_login_selenium Coverage Results" MODIFIED="1494431918523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -28,7 +29,7 @@
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_logic_SQlAlCHEMYTEST.coverage" NAME="Unittests for app.tests.test_logic.SQlAlCHEMYTEST Coverage Results" MODIFIED="1493885809642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_logic_authTest_test_auth.coverage" NAME="Unittests for app.tests.test_logic.authTest.test_auth Coverage Results" MODIFIED="1493886166324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$run.coverage" NAME="run Coverage Results" MODIFIED="1494430400291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_setUp.coverage" NAME="Unittests for app.tests.test_web.test_web.setUp Coverage Results" MODIFIED="1494432946352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_setUp.coverage" NAME="Unittests for app.tests.test_web.test_web.setUp Coverage Results" MODIFIED="1494433894476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -85,8 +86,8 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="225">
+              <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
@@ -606,13 +607,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00046" summary="build">
-      <created>1494242115695</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1494242115695</updated>
-    </task>
     <task id="LOCAL-00047" summary="build">
       <created>1494243340259</created>
       <option name="number" value="00047" />
@@ -949,16 +943,17 @@
       <option name="project" value="LOCAL" />
       <updated>1494433250287</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="build #9324923942394392">
+      <created>1494433393953</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1494433393953</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 18h 59m 47s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 00m 09s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 04m 46s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
     </history-entry>
@@ -968,8 +963,17 @@
     <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 07m 19s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 18h 59m 08s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
+    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 27m 58s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 29m 44s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 30m 43s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 31m 12s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 19h 05m 10s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
@@ -977,11 +981,8 @@
     <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 19h 15m 56s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_app_tests_test_web_test_web_test_login_selenium - 2017.05.10 at 18h 58m 31s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web.test_login_selenium" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_app_tests_test_web_test_web_test_login_selenium - 2017.05.10 at 18h 58m 44s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web.test_login_selenium" configurationId="tests" />
+    <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 19h 28m 25s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1356,8 +1357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="225">
+          <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>
