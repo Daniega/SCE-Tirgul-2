@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.db" afterPath="$PROJECT_DIR$/app.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/test_web.py" afterPath="$PROJECT_DIR$/app/tests/test_web.py" />
     </list>
@@ -87,8 +86,8 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="225">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
@@ -579,13 +578,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00025" summary="build">
-      <created>1494237155714</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1494237155714</updated>
-    </task>
     <task id="LOCAL-00026" summary="build">
       <created>1494237254539</created>
       <option name="number" value="00026" />
@@ -922,13 +914,17 @@
       <option name="project" value="LOCAL" />
       <updated>1494403756379</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="build #9324923942394392">
+      <created>1494404312669</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1494404312669</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 10h 29m 13s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 10h 33m 33s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
     </history-entry>
@@ -948,6 +944,9 @@
       <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 11h 16m 33s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 11h 19m 08s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web_test_login_selenium - 2017.05.10 at 10h 36m 26s.xml">
@@ -994,7 +993,8 @@
     <MESSAGE value="almost done, some host issues" />
     <MESSAGE value="first build try" />
     <MESSAGE value="build" />
-    <option name="LAST_COMMIT_MESSAGE" value="build" />
+    <MESSAGE value="build #9324923942394392" />
+    <option name="LAST_COMMIT_MESSAGE" value="build #9324923942394392" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1328,8 +1328,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="225">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>
