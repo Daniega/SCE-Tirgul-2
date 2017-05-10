@@ -25,7 +25,7 @@ class test_web(unittest.TestCase):
     def setUp(self):
         capabilities = webdriver.DesiredCapabilities().FIREFOX
         capabilities["marionette"] = False
-        binary = FirefoxBinary(r'C:\Program Files (x86)\Mozilla Firefox\firefox')
+        binary = FirefoxBinary(r'C:\Users\illya\PycharmProjects\SCE-Tirgul-2\firefox')
         driver = webdriver.Firefox(firefox_binary=binary, capabilities=capabilities)
         self.browser.implicitly_wait(5)
         self.browser.get("http://127.0.0.1:5000")
