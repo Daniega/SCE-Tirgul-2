@@ -20,7 +20,7 @@ class test_web(unittest.TestCase):
         assert u'המצביע אינו מופיע בבסיס הנתונים' in self.browser.page_source
 
     def setUp(self):
-        self.browser = webdriver.Remote("http://127.0.0.1:5000/", desired_capabilities=DesiredCapabilities.FIREFOX)
+        self.browser = webdriver.Remote("http://192.168.56.1:5000/", desired_capabilities=DesiredCapabilities.FIREFOX)
         self.browser = webdriver.Chrome()
 
     def tearDown(self):
