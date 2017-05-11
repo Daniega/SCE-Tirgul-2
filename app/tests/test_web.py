@@ -38,7 +38,7 @@ class test_web(unittest.TestCase):
     def setUp(self):
         """Setup the test driver and create test users"""
         self.browser = webdriver.PhantomJS()
-        self.browser.get(self.get_server_url())
+        self.browser.get('http://127.0.0.1:5000/login?next=%2F')
 
     def tearDown(self):
         self.browser.quit()
