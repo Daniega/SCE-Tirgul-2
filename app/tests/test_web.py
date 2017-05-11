@@ -30,7 +30,7 @@ class test_web(LiveServerTestCase):
 
     def populate(self):
         db.session.commit()
-        valid_user = User(320880123, 'firstName', 'lastName', False)
+        valid_user = User(111111, 'firstName', 'lastName', False)
         valid_party = Party(u'העבודה','https://www.am-1.org.il/wp-content/uploads/2015/03/%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94.-%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%99%D7%97%D7%A6.jpg')
         db.session.add(valid_party)
         db.session.add(valid_user)
@@ -45,16 +45,17 @@ class test_web(LiveServerTestCase):
         self.browser.quit()
 
     def test_login_selenium(self):
-        self.valid_user = User(320880123, 'firstName', 'lastName', False)
-        self.browser.find_element_by_id('first_name').send_keys(self.valid_user.first_name)
-        self.browser.find_element_by_id('last_name').send_keys(self.valid_user.last_name)
-        self.browser.find_element_by_id('id_number').send_keys(320880123)
-        print self.browser.title
-
-        self.browser.find_element_by_id('EnterBtn').submit()
-        self.browser.implicitly_wait(5)
-        print self.browser.title
-        print self.get_server_url()
+        self.valid_user = User(111111, 'firstName', 'lastName', False)
+        self.valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
+        self.first_name = self.browser.find_element_by_id('first_name')
+        self.last_name = self.browser.find_element_by_id('last_name')
+        self.id_num = self.browser.find_element_by_id('id_num')
+        self.login_button = self.browser.find_element_by_id('login_button')
+        self.first_name.send_keys(self.valid_user.first_name)
+        self.last_name.send_keys(self.valid_user.last_name)
+        self.id_num.send_keys(self.valid_user.id)
+        self.login_button.submit()
+        print(self.browser.title)
         assert 'Home' in self.browser.title
 
     def test_noSuchUser_selenium(self):
