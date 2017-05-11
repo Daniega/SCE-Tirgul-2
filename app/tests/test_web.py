@@ -12,7 +12,7 @@ from app.models import User, Party
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-class test_web(unittest.TestCase):
+class test_web(LiveServerTestCase):
     def create_app(self):
         self.app = app
         self.app.config['TESTING'] = True
@@ -38,7 +38,6 @@ class test_web(unittest.TestCase):
 
     def setUp(self):
         """Setup the test driver and create test users"""
-        LiveServerTestCase.run()
         self.browser = webdriver.PhantomJS()
         self.browser.get(LiveServerTestCase.get_server_url())
 
