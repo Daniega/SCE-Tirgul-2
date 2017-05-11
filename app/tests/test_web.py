@@ -50,7 +50,8 @@ class test_web(LiveServerTestCase):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('illya')
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('yurkevich')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('320880123')
-        self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').click()
+        self.login_button = self.browser.find_element_by_id('EnterBtn')
+        self.login_button.submit()
         print self.browser.current_url
         assert 'Home' in self.browser.title
 
