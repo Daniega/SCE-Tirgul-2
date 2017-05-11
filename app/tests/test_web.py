@@ -49,7 +49,7 @@ class test_web(LiveServerTestCase):
         self.valid_user = User(111111, 'firstName', 'lastName', False)
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys(self.valid_user.first_name)
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys(self.valid_user.last_name)
-        self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys(self.valid_user.id)
+        self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys(111111)
         print self.browser.title
         self.browser.find_element_by_id('EnterBtn').submit()
         self.browser.implicitly_wait(5)
