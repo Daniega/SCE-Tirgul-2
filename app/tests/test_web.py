@@ -53,7 +53,7 @@ class test_web(LiveServerTestCase):
         self.login_button = self.browser.find_element_by_id('EnterBtn')
         self.first_name.send_keys(self.valid_user.first_name)
         self.last_name.send_keys(self.valid_user.last_name)
-        self.id_num.send_keys(self.valid_user.id_num)
+        self.id_num.send_keys(111111)
         self.login_button.submit()
         print(self.browser.title)
         assert 'Home' in self.browser.title
