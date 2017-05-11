@@ -51,6 +51,7 @@ class test_web(LiveServerTestCase):
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('one')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('111')
         self.browser.find_element_by_id('EnterBtn').submit()
+        self.browser.implicitly_wait(5)
         print self.get_server_url()
         assert 'Home' in self.browser.title
 

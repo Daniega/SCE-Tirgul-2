@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/test_web.py" afterPath="$PROJECT_DIR$/app/tests/test_web.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,8 +87,8 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state relative-caret-position="556">
+              <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -711,13 +712,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00085" summary="build #9324923942394392">
-      <created>1494407394798</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1494407394798</updated>
-    </task>
     <task id="LOCAL-00086" summary="build #9324923942394392">
       <created>1494410316612</created>
       <option name="number" value="00086" />
@@ -1054,7 +1048,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494492735498</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="build #9324923942394392">
+      <created>1494492808376</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1494492808376</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1466,8 +1467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+        <state relative-caret-position="556">
+          <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
