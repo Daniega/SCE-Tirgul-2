@@ -29,8 +29,7 @@ class test_web(LiveServerTestCase):
         return self.app
 
     def populate(self):
-        db.session.commit()
-        valid_user = User(111111, 'firstName', 'lastName', False)
+        valid_user = User('tomer', 'admon', '111')
         valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
         db.session.add(valid_party)
         db.session.add(valid_user)
@@ -45,7 +44,7 @@ class test_web(LiveServerTestCase):
         self.browser.quit()
 
     def test_login_selenium(self):
-        self.valid_user = User(111111, 'firstName', 'lastName', False)
+        self.valid_user = User('tomer', 'admon', '111')
         self.valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
         self.first_name = self.browser.find_element_by_id('first_name')
         self.last_name = self.browser.find_element_by_id('last_name')
@@ -53,10 +52,10 @@ class test_web(LiveServerTestCase):
         self.login_button = self.browser.find_element_by_id('EnterBtn')
         self.first_name.send_keys(self.valid_user.first_name)
         self.last_name.send_keys(self.valid_user.last_name)
-        self.id_num.send_keys(111111)
+        self.id_num.send_keys(self.valid_user.id)
         self.login_button.submit()
         print(self.browser.title)
-        assert 'Flask Intro - login page' in self.browser.title
+        assert 'Home' in self.browser.title
 
     def test_noSuchUser_selenium(self):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('no')
