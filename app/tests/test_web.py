@@ -50,7 +50,7 @@ class test_web(LiveServerTestCase):
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('320880123')
         self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').send_keys(Keys.ENTER)
         print self.browser.current_url
-        self.assertEqual('http://127.0.0.1:5000/login?next=%2F', self.browser.current_url)
+        assert 'Home' in self.driver.title
 
     def test_noSuchUser_selenium(self):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('no')
