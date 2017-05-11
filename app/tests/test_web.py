@@ -24,7 +24,7 @@ class test_web(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.PhantomJS()
-        self.browser.get(self.get_server_url())
+        self.browser.get("http://127.0.0.1:5000")
 
 
 
