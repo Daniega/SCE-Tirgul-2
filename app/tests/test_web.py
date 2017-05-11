@@ -18,8 +18,7 @@ class test_web(unittest.TestCase):
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.app.config['LIVESERVER_PORT'] = 8943
         self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir,
-                                                                                 'test.db')  # 'sqlite:///:memory:'
+        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
         db.init_app(self.app)
         with self.app.app_context():  # app context
             db.drop_all()
