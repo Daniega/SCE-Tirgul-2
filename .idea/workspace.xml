@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="build #9324923942394392">
+    <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/test_web.py" afterPath="$PROJECT_DIR$/app/tests/test_web.py" />
     </list>
@@ -87,8 +87,8 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="256">
+              <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -139,8 +139,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="577">
+              <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="79" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -712,13 +712,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00098" summary="build #9324923942394392">
-      <created>1494434087762</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1494434087762</updated>
-    </task>
     <task id="LOCAL-00099" summary="build #9324923942394392">
       <created>1494434137662</created>
       <option name="number" value="00099" />
@@ -1055,7 +1048,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494493995013</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="build #9324923942394392">
+      <created>1494494028182</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1494494028183</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1457,8 +1457,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="577">
+          <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1467,8 +1467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="256">
+          <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
