@@ -47,7 +47,6 @@ class test_web(LiveServerTestCase):
 
     def test_login_selenium(self):
         self.valid_user = User(111111, 'some', 'one', False)
-        self.id_num = self.driver.find_element_by_id('id_num')
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('some')
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('one')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('111')
