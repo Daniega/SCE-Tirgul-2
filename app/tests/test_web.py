@@ -44,7 +44,7 @@ class test_web(LiveServerTestCase):
         self.browser.quit()
 
     def test_login_selenium(self):
-        self.valid_user = User(111,'tomer', 'admon')
+        self.valid_user = User(111,'tomer', 'admon',False)
         self.valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
         self.first_name = self.browser.find_element_by_id('first_name')
         self.last_name = self.browser.find_element_by_id('last_name')
