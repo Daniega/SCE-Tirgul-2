@@ -56,7 +56,7 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys(111111)
         self.login_button.submit()
         print(self.browser.title)
-        assert 'Home' in self.browser.title
+        assert 'Flask Intro - login page' in self.browser.title
 
     def test_noSuchUser_selenium(self):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('no')
