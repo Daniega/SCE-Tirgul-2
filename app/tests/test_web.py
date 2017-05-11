@@ -40,7 +40,6 @@ class test_web(LiveServerTestCase):
     def setUp(self):
         """Setup the test driver and create test users"""
         self.browser = webdriver.PhantomJS()
-        self.browser.implicitly_wait(5)
         self.browser.get(self.get_server_url())
 
     def tearDown(self):
