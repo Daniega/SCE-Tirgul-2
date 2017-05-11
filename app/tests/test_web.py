@@ -32,7 +32,7 @@ class test_web(LiveServerTestCase):
         db.session.commit()
         valid_user = User(320880123, 'illya', 'yurkevich', False)
         valid_party =  Party(u'העבודה',
-                      'https://www.am-1.org.il/wp-content/uploads/2015/03/%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94.-%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%99%D7%97%D7%A6.jpg',0)
+                      'https://www.am-1.org.il/wp-content/uploads/2015/03/%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94.-%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%99%D7%97%D7%A6.jpg')
         db.session.add(valid_party)
         db.session.add(valid_user)
         db.session.commit()
@@ -50,9 +50,7 @@ class test_web(LiveServerTestCase):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('illya')
         self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('yurkevich')
         self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('320880123')
-        self.login_button = self.browser.find_element_by_id('EnterBtn')
-        self.login_button.submit()
-        print self.browser.current_url
+        self.browser.find_element_by_id('EnterBtn').submit()
         assert 'Home' in self.browser.title
 
     def test_noSuchUser_selenium(self):
