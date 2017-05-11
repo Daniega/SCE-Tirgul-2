@@ -23,8 +23,8 @@ class test_web(unittest.TestCase):
         assert "Flask Intro - login page" in self.browser.title
 
     def setUp(self):
-        self.driver = webdriver.PhantomJS()
-        self.driver.get(self.get_server_url())
+        self.browser = webdriver.PhantomJS()
+        self.browser.get(self.get_server_url())
 
 
 
