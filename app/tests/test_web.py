@@ -24,7 +24,7 @@ class test_web(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.PhantomJS()
-        self.browser.get("http://127.0.0.1:5000")
+        self.browser.get("http://127.0.0.1:5000/login?next=%2F")
 
 
 
