@@ -13,28 +13,7 @@ from app.models import User, Party
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class test_web(LiveServerTestCase):
-    def create_app(self):
-        self.app = app
-        self.app.config['TESTING'] = True
-        self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['LIVESERVER_PORT'] = 8943
-        self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
-        db.init_app(self.app)
-        with self.app.app_context():  # app context
-            db.drop_all()
-            db.create_all()
-            self.populate()
 
-        return self.app
-
-    def populate(self):
-        db.session.commit()
-        valid_user = User(111111, 'firstName', 'lastName', False)
-        valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
-        db.session.add(valid_party)
-        db.session.add(valid_user)
-        db.session.commit()
 
     def setUp(self):
         """Setup the test driver and create test users"""
