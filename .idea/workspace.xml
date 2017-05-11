@@ -87,8 +87,8 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="506">
+              <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -712,13 +712,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00087" summary="build #9324923942394392">
-      <created>1494410954374</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1494410954374</updated>
-    </task>
     <task id="LOCAL-00088" summary="build #9324923942394392">
       <created>1494412008965</created>
       <option name="number" value="00088" />
@@ -1055,7 +1048,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494492844216</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="build #9324923942394392">
+      <created>1494492916499</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1494492916499</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1467,8 +1467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="506">
+          <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
