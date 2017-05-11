@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.db" afterPath="$PROJECT_DIR$/app.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/test_web.py" afterPath="$PROJECT_DIR$/app/tests/test_web.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,6 +29,7 @@
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$SCE_Tirgul_2.coverage" NAME="SCE-Tirgul-2 Coverage Results" MODIFIED="1493879942054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_logic_SQlAlCHEMYTEST.coverage" NAME="Unittests for app.tests.test_logic.SQlAlCHEMYTEST Coverage Results" MODIFIED="1493885809642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_logic_authTest_test_auth.coverage" NAME="Unittests for app.tests.test_logic.authTest.test_auth Coverage Results" MODIFIED="1493886166324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_populate.coverage" NAME="Unittests for app.tests.test_web.test_web.populate Coverage Results" MODIFIED="1494491119223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$run.coverage" NAME="run Coverage Results" MODIFIED="1494490454366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_setUp.coverage" NAME="Unittests for app.tests.test_web.test_web.setUp Coverage Results" MODIFIED="1494434130398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
@@ -71,7 +73,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -83,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_web.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+            <state relative-caret-position="152">
+              <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -168,8 +170,8 @@
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/app/templates/login.html" />
-        <option value="$PROJECT_DIR$/app/tests/test_web.py" />
         <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/app/tests/test_web.py" />
       </list>
     </option>
   </component>
@@ -390,23 +392,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
-    <configuration default="false" name="Unittests for app.tests.test_web.test_web.tearDown" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SCE-Tirgul-2" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;app.tests.test_web.test_web.tearDown&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests for app.tests.test_web.test_web.populate">
     <configuration default="false" name="Unittests for app.tests.test_web.test_web.test_login_selenium" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -472,6 +458,22 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests for app.tests.test_web.test_web.populate" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SCE-Tirgul-2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;app.tests.test_web.test_web.populate&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -643,19 +645,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.SCE-Tirgul-2" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.tearDown" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.test_login_selenium" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.setUp" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web" />
-      <item index="5" class="java.lang.String" itemvalue="Python.run" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.test_login_selenium" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.setUp" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web" />
+      <item index="4" class="java.lang.String" itemvalue="Python.run" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.populate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.setUp" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.test_login_selenium" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.tearDown" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.populate" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.setUp" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.test_login_selenium" />
       </list>
     </recent_temporary>
   </component>
@@ -669,13 +671,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
-    </task>
-    <task id="LOCAL-00063" summary="build">
-      <created>1494401136138</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1494401136138</updated>
     </task>
     <task id="LOCAL-00064" summary="build">
       <created>1494401656157</created>
@@ -1013,18 +1008,25 @@
       <option name="project" value="LOCAL" />
       <updated>1494490933916</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="build #9324923942394392">
+      <created>1494491034750</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1494491034750</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 29m 44s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 30m 43s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.10 at 19h 31m 12s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_app_tests_test_web_test_web_populate - 2017.05.11 at 11h 25m 19s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web.populate" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 19h 32m 04s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
@@ -1410,22 +1412,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
