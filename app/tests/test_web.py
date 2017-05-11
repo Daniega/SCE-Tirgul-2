@@ -23,12 +23,8 @@ class test_web(unittest.TestCase):
         assert "Flask Intro - login page" in self.browser.title
 
     def setUp(self):
-        capabilities = webdriver.DesiredCapabilities().FIREFOX
-        capabilities["marionette"] = False
-        binary = FirefoxBinary(r'.\firefox')
-        driver = webdriver.Firefox(firefox_binary=binary, capabilities=capabilities)
-        self.browser.implicitly_wait(5)
-        self.browser.get("http://127.0.0.1:5000")
+        self.driver = webdriver.PhantomJS()
+        self.driver.get(self.get_server_url())
 
 
 
