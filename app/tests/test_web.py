@@ -53,6 +53,7 @@ class test_web(LiveServerTestCase):
         print self.browser.title
         self.browser.find_element_by_id('EnterBtn').submit()
         self.browser.implicitly_wait(5)
+        print self.browser.title
         print self.get_server_url()
         assert 'Home' in self.browser.title
 
