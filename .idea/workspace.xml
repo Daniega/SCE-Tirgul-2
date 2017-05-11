@@ -16,7 +16,7 @@
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_logic_myTest.coverage" NAME="Unittests for app.tests.test_logic.myTest Coverage Results" MODIFIED="1493905127266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_in_test_web_py.coverage" NAME="Unittests in test_web.py Coverage Results" MODIFIED="1494431452688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_tearDown.coverage" NAME="Unittests for app.tests.test_web.test_web.tearDown Coverage Results" MODIFIED="1494431634826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web.coverage" NAME="Unittests for app.tests.test_web.test_web Coverage Results" MODIFIED="1494492313163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web.coverage" NAME="Unittests for app.tests.test_web.test_web Coverage Results" MODIFIED="1494493856878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_test_noSuchUser_selenium.coverage" NAME="Unittests for app.tests.test_web.test_web.test_noSuchUser_selenium Coverage Results" MODIFIED="1494431619734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$db_create.coverage" NAME="db_create Coverage Results" MODIFIED="1494145051345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SCE_Tirgul_2$Unittests_for_app_tests_test_web_test_web_test_login_selenium.coverage" NAME="Unittests for app.tests.test_web.test_web.test_login_selenium Coverage Results" MODIFIED="1494431918523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -87,8 +87,8 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+            <state relative-caret-position="81">
+              <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -139,8 +139,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="79" />
+            <state relative-caret-position="527">
+              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -208,9 +208,9 @@
         <option value="$PROJECT_DIR$/app/tests/test_logic.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/app/templates/login.html" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/templates/login.html" />
         <option value="$PROJECT_DIR$/app/tests/test_web.py" />
       </list>
     </option>
@@ -432,7 +432,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python tests.Unittests for app.tests.test_web.test_web">
     <configuration default="false" name="Unittests for app.tests.test_web.test_web.test_login_selenium" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -693,8 +693,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.populate" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.setUp" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for app.tests.test_web.test_web.test_login_selenium" />
@@ -711,13 +711,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
-    </task>
-    <task id="LOCAL-00094" summary="build #9324923942394392">
-      <created>1494433250287</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1494433250287</updated>
     </task>
     <task id="LOCAL-00095" summary="build #9324923942394392">
       <created>1494433393953</created>
@@ -1055,7 +1048,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494493585584</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="build #9324923942394392">
+      <created>1494493695324</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1494493695324</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1065,14 +1065,14 @@
     <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.11 at 11h 45m 13s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_app_tests_test_web_test_web - 2017.05.11 at 12h 10m 57s.xml">
+      <configuration name="Unittests for app.tests.test_web.test_web" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web_populate - 2017.05.11 at 11h 25m 19s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web.populate" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web_populate - 2017.05.11 at 11h 36m 09s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web.populate" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 19h 32m 11s.xml">
-      <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_app_tests_test_web_test_web_setUp - 2017.05.10 at 19h 33m 17s.xml">
       <configuration name="Unittests for app.tests.test_web.test_web.setUp" configurationId="tests" />
@@ -1100,7 +1100,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45547944" sideWeight="0.49709725" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45547944" sideWeight="0.49709725" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23744293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1445,6 +1445,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1455,20 +1465,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        <state relative-caret-position="81">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
