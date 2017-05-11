@@ -49,7 +49,7 @@ class test_web(LiveServerTestCase):
         self.valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
         self.first_name = self.browser.find_element_by_id('first_name')
         self.last_name = self.browser.find_element_by_id('last_name')
-        self.id_num = self.browser.find_element_by_id('id_num')
+        self.id_num = self.browser.find_element_by_id('id_number')
         self.login_button = self.browser.find_element_by_id('login_button')
         self.first_name.send_keys(self.valid_user.first_name)
         self.last_name.send_keys(self.valid_user.last_name)
