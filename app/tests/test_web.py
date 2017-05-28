@@ -74,9 +74,8 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         self.browser.implicitly_wait(5)
         print ('here '+self.browser.title)
-        self.browser.implicitly_wait(5)
-        self.browser.find_element_by_xpath('//*[@id="העבודה"]').click()
-        self.browser.find_element_by_xpath('/html/body/div[2]/form/div[4]/button').click()
+        self.browser.find_element_by_css_selector('body > div.container > form > div:nth-child(3)').submit()
+        self.browser.find_element_by_id('btnSubmit').submit()
         alert = self.browser.switchTo().alert();
         alert.accept();
         self.browser.implicitly_wait(5)
