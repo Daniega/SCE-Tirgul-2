@@ -62,6 +62,24 @@ class test_web(LiveServerTestCase):
         self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').click()
         assert "Flask Intro - login page" in self.browser.title
 
+    def test_full_selenium(self):
+        self.valid_user = User('tomer', 'admon','320880123',False)
+        self.first_name = self.browser.find_element_by_id('first_name')
+        self.last_name = self.browser.find_element_by_id('last_name')
+        self.id_num = self.browser.find_element_by_id('id_number')
+        self.login_button = self.browser.find_element_by_id('EnterBtn')
+        self.first_name.send_keys(self.valid_user.first_name)
+        self.last_name.send_keys(self.valid_user.last_name)
+        self.id_num.send_keys('320880123')
+        self.login_button.submit()
+        self.browser.implicitly_wait(5)
+        self.browser.find_element_by_xpath('//*[@id="פתק לבן"]').click()
+        self.browser.find_element_by_xpath('/html/body/div[2]/form/div[4]/button').click()
+        alert = self.browser.switchTo().alert();
+        alert.accept();
+        assert "Flask Intro - login page" in self.browser.title
+
+
 
 
 

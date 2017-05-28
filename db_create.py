@@ -21,9 +21,9 @@ class db_create():
         db.session.add(likud)
         db.session.add(lavan)
         db.session.add(admon)
+        db.session.add(illya)
         db.session.add(tomer)
         db.session.add(daniel)
-        db.session.add(illya)
         db.session.commit()
         # users = User.query.all()
         # print users
