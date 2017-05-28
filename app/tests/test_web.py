@@ -73,10 +73,11 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys('320880123')
         self.login_button.submit()
         self.browser.implicitly_wait(5)
-        self.browser.find_element_by_xpath('/html/body/div[2]/form/div[3]/div/label').click()
+        # self.browser.find_element_by_xpath('/html/body/div[2]/form/div[3]/div/label').click()
         self.browser.find_element_by_xpath('/html/body/div[2]/form/div[4]/button').click()
         alert = self.browser.switchTo().alert();
         alert.accept();
+        self.browser.implicitly_wait(5)
         assert "Flask Intro - login page" in self.browser.title
 
 
