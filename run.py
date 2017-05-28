@@ -1,5 +1,5 @@
 from app import app
-from app import db
+from app.development import db
 from db_create import db_create
 
 db.drop_all()
