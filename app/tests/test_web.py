@@ -72,7 +72,7 @@ class test_web(LiveServerTestCase):
         self.last_name.send_keys(self.valid_user.last_name)
         self.id_num.send_keys('320880123')
         self.login_button.submit()
-        self.browser.implicitly_wait(10)
+        self.browser.implicitly_wait(2)
         print ('here '+self.browser.title)
         self.browser.find_element_by_id('הליכוד'.encode('utf-8')).submit()
         self.browser.find_element_by_id('btnSubmit').submit()
