@@ -28,7 +28,7 @@ class myTest(unittest.TestCase):
                                          follow_redirects=True)
         self.assertEqual(invalid_login.status_code, 404)
 
-        assert 'המצביע אינו מופיע בבסיס הנתונים' in invalid_login.data
+        assert 'המצביע אינו מופיע בבסיס הנתונים'.encode('utf-8') in invalid_login.data
 
     def test_WrongUser(self):
         login_page = self.tester.get('/login')
@@ -39,7 +39,7 @@ class myTest(unittest.TestCase):
                                          follow_redirects=True)
         self.assertEqual(invalid_login.status_code, 404)
 
-        assert 'המצביע אינו מופיע בבסיס הנתונים' in invalid_login.data
+        assert 'המצביע אינו מופיע בבסיס הנתונים'.encode('utf-8') in invalid_login.data
 
 
     def setUp(self):
