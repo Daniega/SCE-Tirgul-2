@@ -19,9 +19,9 @@ class myTest(unittest.TestCase):
     def test_login(self):
         # Check if form visible
         login_page = self.tester.get('/login')
-        assert 'first_name' in login_page.data
-        assert 'last_name' in login_page.data
-        assert 'id_number' in login_page.data
+        assert 'first_name'.encode('utf-8') in login_page.data
+        assert 'last_name'.encode('utf-8') in login_page.data
+        assert 'id_number'.encode('utf-8') in login_page.data
 
         # Check if id is missing
         invalid_login = self.tester.post('login', data=dict(first_name='illya', last_name='yurkevich', id_number=''),
@@ -32,9 +32,9 @@ class myTest(unittest.TestCase):
 
     def test_WrongUser(self):
         login_page = self.tester.get('/login')
-        assert 'first_name' in login_page.data
-        assert 'last_name' in login_page.data
-        assert 'id_number' in login_page.data  # check if user exist
+        assert 'first_name'.encode('utf-8') in login_page.data
+        assert 'last_name'.encode('utf-8') in login_page.data
+        assert 'id_number'.encode('utf-8') in login_page.data  # check if user exist
         invalid_login = self.tester.post('login', data=dict(first_name='someone', last_name='unknown', id_number='666'),
                                          follow_redirects=True)
         self.assertEqual(invalid_login.status_code, 404)
