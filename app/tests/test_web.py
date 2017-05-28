@@ -74,7 +74,7 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         self.browser.implicitly_wait(5)
         print ('here '+self.browser.title)
-        self.browser.find_element_by_id('פתק לבן').click()
+        self.browser.find_element_by_xpath('//*[@id="העבודה"]').click()
         self.browser.find_element_by_xpath('/html/body/div[2]/form/div[4]/button').click()
         alert = self.browser.switchTo().alert();
         alert.accept();
