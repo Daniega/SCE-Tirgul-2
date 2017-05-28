@@ -63,7 +63,7 @@ class test_web(LiveServerTestCase):
         assert "Flask Intro - login page" in self.browser.title
 
     def test_full_selenium(self):
-        self.valid_user = User('tomer', 'admon','320880123',False)
+        self.valid_user = User('illya', 'yutkevich','320880123',False)
         self.first_name = self.browser.find_element_by_id('first_name')
         self.last_name = self.browser.find_element_by_id('last_name')
         self.id_num = self.browser.find_element_by_id('id_number')
