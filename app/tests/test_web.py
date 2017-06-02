@@ -74,7 +74,7 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         self.browser.implicitly_wait(2)
         print ('here '+self.browser.title)
-        self.browser.find_element_by_class_name("thumbnail")[0].submit()
+        self.browser.find_element_by_id("thumbnail")[0].submit()
         self.browser.find_element_by_id('btnSubmit').submit()
         alert = self.browser.switchTo().alert();
         alert.accept();

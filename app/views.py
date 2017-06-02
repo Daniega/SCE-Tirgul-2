@@ -8,21 +8,21 @@ from flask_login import login_user, logout_user, current_user, login_required
 
 from app import app, login_manager
 from app import db
-from .models import User, Party
+from models import User, Party
+
 
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-def validateAndAdd(party_name):
+def validateAndAdd(id):
     cur_user = User.query.filter_by(id_number=current_user.id_number).all()
-    party = Party.query.filter_by(name=party_name).first()
+    party = Party.query.filter_by(id=id).first()
     party.vote_count += 1
     for user in cur_user:
         user.voted = True
     db.session.commit()
-
 
 
 @app.route('/', methods=['GET'])
@@ -33,7 +33,7 @@ def index():
     if request.method == 'POST':
         validateAndAdd(request.form['party_name'])
         return redirect(url_for('login'))
-    g.user = current_user #global user parameter used by flask framwork
+    g.user = current_user  # global user parameter used by flask framwork
     parties = Party.query.all()
     return render_template('index.html', title='Home', user=g.user, parties=parties, error=error)
 
@@ -57,20 +57,20 @@ def login():
                         return render_template('login.html', error=error)
 
                     else:
-                        #user = User.query.filter_by(id_number=id_number).first()
+                        # user = User.query.filter_by(id_number=id_number).first()
                         login_user(user)  ## built in 'flask login' method that creates a user session
                         return redirect(url_for('index'))
 
             error = u'המצביע אינו מופיע בבסיס הנתונים'
 
-    return render_template('login.html', error=error),404
+    return render_template('login.html', error=error), 404
 
 
 ## will handle the logout request
 @app.route('/logout')
 @login_required
 def logout():
-    logout_user() ## built in 'flask login' method that deletes the user session
+    logout_user()  ## built in 'flask login' method that deletes the user session
     return redirect(url_for('index'))
 
 
