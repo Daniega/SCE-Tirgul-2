@@ -74,8 +74,6 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         self.browser.implicitly_wait(5)
         print ('here '+self.browser.title)
-        self.browser.find_element_by_tag_name('article'[0]).click()
-        self.browser.implicitly_wait(1)
         self.browser.find_element_by_id(u'btnSubmit').submit()
         alert = self.browser.switchTo().alert();
         alert.accept();
