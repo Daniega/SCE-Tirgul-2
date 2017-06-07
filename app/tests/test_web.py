@@ -17,9 +17,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class test_web(LiveServerTestCase):
     def create_app(self):
         self.app = app
-        self.app.config['TESTING'] = True
+        # self.app.config['TESTING'] = True
         self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['LIVESERVER_PORT'] = 8943
+        self.app.config['LIVESERVER_PORT'] = 5000
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
         db.init_app(self.app)
@@ -44,7 +44,18 @@ class test_web(LiveServerTestCase):
     def tearDown(self):
         self.browser.quit()
 
-
+    def test_login_selenium(self):
+        self.valid_user = User('illya', 'yurkevich','320880123',False)
+        self.first_name = self.browser.find_element_by_id('first_name')
+        self.last_name = self.browser.find_element_by_id('last_name')
+        self.id_num = self.browser.find_element_by_id('id_number')
+        self.login_button = self.browser.find_element_by_id('EnterBtn')
+        self.first_name.send_keys(self.valid_user.first_name)
+        self.last_name.send_keys(self.valid_user.last_name)
+        self.id_num.send_keys('320880123')
+        self.login_button.submit()
+        print(self.browser.title)
+        assert 'Home' in self.browser.title
 
     def test_noSuchUser_selenium(self):
         self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('no')
@@ -54,26 +65,28 @@ class test_web(LiveServerTestCase):
         assert "Flask Intro - login page" in self.browser.title
 
     def test_full_selenium(self):
-        self.valid_user_two = User('dani', 'shapira','305476384',False)
+        self.valid_user = User('illya', 'yurkevich','320880123',False)
         self.first_name = self.browser.find_element_by_id('first_name')
         self.last_name = self.browser.find_element_by_id('last_name')
         self.id_num = self.browser.find_element_by_id('id_number')
         self.login_button = self.browser.find_element_by_id('EnterBtn')
-        self.first_name.send_keys(self.valid_user_two.first_name)
-        self.last_name.send_keys(self.valid_user_two.last_name)
-        self.id_num.send_keys('305476384')
+        self.first_name.send_keys(self.valid_user.first_name)
+        self.last_name.send_keys(self.valid_user.last_name)
+        self.id_num.send_keys('320880123')
         self.login_button.submit()
         print ('here '+self.browser.title)
-        self.browser.implicitly_wait(10)
-        self.browser.get("http://localhost:5000/index")
-        self.browser.get("http://localhost:5000/index")
-        self.browser.find_element_by_id("1").click()
+        wait = WebDriverWait(self.browser, 15)
+        self.browser.get(self.get_server_url())
+        self.browser.get(self.get_server_url())
+        element=wait.until(EC.presence_of_element_located((By.ID, "1")))
+        element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
-        alert = self.browser.switch_to.alert
-        alert.accept()
+        alert = self.browser.switch_to.alert;
+        alert.accept();
         self.browser.implicitly_wait(5)
         assert "Flask Intro - login page" in self.browser.title
+
 
 
 
