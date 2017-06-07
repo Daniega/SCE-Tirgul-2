@@ -17,7 +17,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class test_web(LiveServerTestCase):
     def create_app(self):
         self.app = app
-        # self.app.config['TESTING'] = True
+        self.app.config['TESTING'] = True
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.app.config['LIVESERVER_PORT'] = 5000
         self.app.config['WTF_CSRF_ENABLED'] = False
