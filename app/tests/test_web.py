@@ -75,7 +75,7 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys('320880123')
         self.login_button.submit()
         print ('here '+self.browser.title)
-        wait = WebDriverWait(self, 15)
+        wait = WebDriverWait(self.browser, 15)
         element=wait.until(EC.presence_of_element_located((By.ID, "1")))
         element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
