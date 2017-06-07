@@ -26,6 +26,7 @@ class test_web(LiveServerTestCase):
         with self.app.app_context():  # app context
             db.drop_all()
             db.create_all()
+            self.browser.close()
             self.populate()
 
         return self.app
