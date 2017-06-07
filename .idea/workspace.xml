@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.db" afterPath="$PROJECT_DIR$/app.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/index.html" afterPath="$PROJECT_DIR$/app/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/test_web.py" afterPath="$PROJECT_DIR$/app/tests/test_web.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,21 +86,11 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="68" column="58" lean-forward="false" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+            <state relative-caret-position="75">
+              <caret line="39" column="57" lean-forward="false" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/all.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -154,7 +142,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="302">
               <caret line="14" column="108" lean-forward="false" selection-start-line="14" selection-start-column="108" selection-end-line="14" selection-end-column="108" />
               <folding />
             </state>
@@ -632,13 +620,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00197" summary="build #9324923942394392">
-      <created>1496397826748</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1496397826748</updated>
-    </task>
     <task id="LOCAL-00198" summary="build #9324923942394392">
       <created>1496397953312</created>
       <option name="number" value="00198" />
@@ -975,7 +956,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496837155786</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="build #9324923942394392">
+      <created>1496838492653</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1496838492653</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1430,7 +1418,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="302">
           <caret line="14" column="108" lean-forward="false" selection-start-line="14" selection-start-column="108" selection-end-line="14" selection-end-column="108" />
           <folding />
         </state>
@@ -1438,8 +1426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="68" column="58" lean-forward="false" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+        <state relative-caret-position="75">
+          <caret line="39" column="57" lean-forward="false" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
