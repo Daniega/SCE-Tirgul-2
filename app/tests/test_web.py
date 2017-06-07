@@ -4,10 +4,10 @@ import unittest
 import time
 
 from flask_testing import LiveServerTestCase
-from selenium import webdriver
 from app import app, db
 from app.models import User, Party
-from selenium.webdriver.common.by import By
+
+from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
@@ -79,7 +79,16 @@ class test_web(LiveServerTestCase):
         # self.browser.switch_to.frame(self.browser.find_element_by_id("mainForm"))
         print ('here '+self.browser.current_url)
         time.sleep(5)
-        self.browser.find_element_by_tag_name("div")
+
+
+        self.browser.get("url")
+        delay = 3  # seconds
+        try:
+            WebDriverWait(self.browser, delay).until( EC.presence_of_element_located(self.browser.find_element_by_id('1')))
+            print "Page is ready!"
+        except TimeoutException:
+            print "Loading took too much time!"
+
         # wait = WebDriverWait(self.browser, 10)
         # element=wait.until(EC.presence_of_element_located((By.ID, "3")))
         # element.click()
