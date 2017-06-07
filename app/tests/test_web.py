@@ -78,7 +78,7 @@ class test_web(LiveServerTestCase):
         wait = WebDriverWait(self.browser, 10)
         self.browser.get(self.get_server_url())
         self.browser.get(self.get_server_url())
-        element=wait.until(EC.presence_of_element_located((By.ID, "1")))
+        element=wait.until(EC.presence_of_element_located(self.browser.find_element_by_id("1")))
         element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
