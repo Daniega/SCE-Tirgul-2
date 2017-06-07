@@ -65,7 +65,7 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         print ('here '+self.browser.title)
         self.browser.implicitly_wait(10)
-        element = self.browser.find_element_by_class_name("1")
+        element = self.browser.find_element_by_css_selector("body > div.container > form > div:nth-child(3) > div > label > div > div > img")
         element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
