@@ -84,7 +84,7 @@ class test_web(LiveServerTestCase):
         self.browser.get("url")
         delay = 3  # seconds
         try:
-            WebDriverWait(self.browser, delay).until( EC.presence_of_element_located(self.browser.find_element_by_id('1')))
+            WebDriverWait(self.browser, 10).until( EC.presence_of_element_located(self.browser.find_element_by_id('1')))
             print ("Page is ready!")
         except TimeoutException:
             print ("Loading took too much time!")
