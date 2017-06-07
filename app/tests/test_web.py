@@ -78,6 +78,7 @@ class test_web(LiveServerTestCase):
         try:
             element = WebDriverWait(self.browser, 10).until(
                 EC.presence_of_element_located((By.ID, "1")))
+            element = self.browser.find_element_by_id("1")
 
         finally:
             element.click()
