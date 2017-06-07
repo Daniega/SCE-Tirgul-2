@@ -79,7 +79,7 @@ class test_web(LiveServerTestCase):
         # self.browser.switch_to.frame(self.browser.find_element_by_id("mainForm"))
         print ('here '+self.browser.current_url)
         time.sleep(5)
-        self.browser.find_element_by_tag_name("input").find_element_by_id("1").click()
+        self.browser.find_element_by_tag_name("input")
         # wait = WebDriverWait(self.browser, 10)
         # element=wait.until(EC.presence_of_element_located((By.ID, "3")))
         # element.click()
