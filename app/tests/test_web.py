@@ -64,18 +64,15 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys('305476384')
         self.login_button.submit()
         print ('here '+self.browser.title)
-        try:
-            self.browser.implicitly_wait(10)
-            element = self.browser.find_element_by_id("1")
-
-        finally:
-            element.click()
-            self.browser.find_element_by_id(u'btnSubmit').click()
-            self.browser.implicitly_wait(5)
-            alert = self.browser.switch_to.alert;
-            alert.accept();
-            self.browser.implicitly_wait(5)
-            assert "Flask Intro - login page" in self.browser.title
+        self.browser.implicitly_wait(10)
+        element = self.browser.find_element_by_id("1")
+        element.click()
+        self.browser.find_element_by_id(u'btnSubmit').click()
+        self.browser.implicitly_wait(5)
+        alert = self.browser.switch_to.alert;
+        alert.accept();
+        self.browser.implicitly_wait(5)
+        assert "Flask Intro - login page" in self.browser.title
 
 
 
