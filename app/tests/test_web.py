@@ -38,6 +38,7 @@ class test_web(LiveServerTestCase):
 
     def setUp(self):
         """Setup the test driver and create test users"""
+        webdriver.createSession()
         self.browser = webdriver.PhantomJS()
         self.browser.get(self.get_server_url())
 
@@ -65,7 +66,7 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         print ('here '+self.browser.title)
         self.browser.implicitly_wait(10)
-        element = self.browser.find_element_by_id("1")
+        element = self.browser.find_element_by_class_name("1")
         element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
