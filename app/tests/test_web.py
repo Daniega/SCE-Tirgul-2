@@ -36,7 +36,7 @@ class test_web(LiveServerTestCase):
 
     def setUp(self):
         """Setup the test driver and create test users"""
-        self.browser = webdriver.PhantomJS()
+        self.browser = webdriver.chrome()
         self.browser.get(self.get_server_url())
 
     def tearDown(self):
@@ -75,8 +75,9 @@ class test_web(LiveServerTestCase):
         self.browser.implicitly_wait(5)
         print ('here '+self.browser.title)
         self.browser.find_element_by_id("1").click()
-        self.browser.find_element_by_id(u'btnSubmit').submit()
-        alert = self.browser.switchTo().alert();
+        self.browser.find_element_by_id(u'btnSubmit').click()
+        self.browser.implicitly_wait(5)
+        alert = self.browser.switch_to.alert;
         alert.accept();
         self.browser.implicitly_wait(5)
         assert "Flask Intro - login page" in self.browser.title
