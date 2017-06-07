@@ -65,12 +65,13 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         print ('here '+self.browser.title)
         self.browser.implicitly_wait(10)
-        element = self.browser.find_element_by_css_selector("#1 > input").send_keys("1234")
-        element.click()
+        self.browser.get("http://localhost:5000/index")
+        self.browser.get("http://localhost:5000/index")
+        self.browser.find_element_by_id("1").click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
-        alert = self.browser.switch_to.alert;
-        alert.accept();
+        alert = self.browser.switch_to.alert
+        alert.accept()
         self.browser.implicitly_wait(5)
         assert "Flask Intro - login page" in self.browser.title
 
