@@ -75,15 +75,16 @@ class test_web(LiveServerTestCase):
         self.last_name.send_keys(self.valid_user.last_name)
         self.id_num.send_keys('320880123')
         self.login_button.submit()
-        self.browser.switch_to.frame(self.browser.find_element_by_id("3"));
+        self.browser.switch_to.frame(self.browser.find_element_by_name("myForm"))
         print ('here '+self.browser.current_url)
-        wait = WebDriverWait(self.browser, 10)
-        element=wait.until(EC.presence_of_element_located((By.ID, "3")))
-        element.click()
+        self.browser.find_element_by_id("1").click()
+        # wait = WebDriverWait(self.browser, 10)
+        # element=wait.until(EC.presence_of_element_located((By.ID, "3")))
+        # element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
-        alert = self.browser.switch_to.alert;
-        alert.accept();
+        alert = self.browser.switch_to.alert
+        alert.accept()
         self.browser.implicitly_wait(5)
         assert "Flask Intro - login page" in self.browser.title
 
