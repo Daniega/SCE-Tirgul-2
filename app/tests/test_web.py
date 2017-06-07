@@ -17,7 +17,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class test_web(LiveServerTestCase):
     def create_app(self):
         self.app = app
-        self.app.config['TESTING'] = True
+        # self.app.config['TESTING'] = True
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.app.config['LIVESERVER_PORT'] = 8943
         self.app.config['WTF_CSRF_ENABLED'] = False
@@ -26,7 +26,6 @@ class test_web(LiveServerTestCase):
         with self.app.app_context():  # app context
             db.drop_all()
             db.create_all()
-            self.browser.close()
             self.populate()
 
         return self.app
@@ -76,8 +75,12 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys('320880123')
         self.login_button.submit()
         print ('here '+self.browser.title)
-        wait = WebDriverWait(self.browser, 15)
-        element=wait.until(EC.presence_of_element_located((By.ID, "1")))
+        try:
+            element = WebDriverWait(self.browser, 10).until(
+                EC.presence_of_element_located((By.ID, "1"))
+            )
+        finally:
+            self.browser.quit()
         element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
