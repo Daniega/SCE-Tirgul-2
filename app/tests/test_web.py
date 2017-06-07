@@ -4,12 +4,12 @@ import unittest
 
 from flask_testing import LiveServerTestCase
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from app import app, db
 from app.models import User, Party
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -75,8 +75,9 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys('320880123')
         self.login_button.submit()
         print ('here '+self.browser.title)
-        self.browser.implicitly_wait(10)
-        self.browser.find_element_by_id("1").click()
+        wait = WebDriverWait(self, 15)
+        element=wait.until(EC.presence_of_element_located((By.ID, "1")))
+        element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
         alert = self.browser.switch_to.alert;

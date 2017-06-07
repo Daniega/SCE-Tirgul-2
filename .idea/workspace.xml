@@ -86,11 +86,11 @@
       <file leaf-file-name="test_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+            <state relative-caret-position="302">
+              <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
-                <element signature="e#1481#1500#0" expanded="false" />
+                <element signature="e#1489#1508#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -594,13 +594,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00181" summary="build #9324923942394392">
-      <created>1495966004461</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1495966004461</updated>
-    </task>
     <task id="LOCAL-00182" summary="build #9324923942394392">
       <created>1495966127637</created>
       <option name="number" value="00182" />
@@ -937,7 +930,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496833681715</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="build #9324923942394392">
+      <created>1496833734261</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1496833734261</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1406,11 +1406,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/test_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+        <state relative-caret-position="302">
+          <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <element signature="e#1481#1500#0" expanded="false" />
+            <element signature="e#1489#1508#0" expanded="false" />
           </folding>
         </state>
       </provider>
