@@ -22,7 +22,7 @@ class test_web(LiveServerTestCase):
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.app.config['LIVESERVER_PORT'] = 8943
         self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
+        self.app.config['SQLALCHEMY_DATABASnpmE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
         db.init_app(self.app)
         with self.app.app_context():  # app context
             db.drop_all()
@@ -76,7 +76,7 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys('320880123')
         self.login_button.submit()
         print ('here '+self.browser.title)
-        element = WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.ID, '1')))
+        driver.implicitly_wait(10)  # seconds
         element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
