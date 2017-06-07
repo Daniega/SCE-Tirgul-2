@@ -17,7 +17,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class test_web(LiveServerTestCase):
     def create_app(self):
         self.app = app
-        # self.app.config['TESTING'] = True
+        self.app.config['TESTING'] = True
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.app.config['LIVESERVER_PORT'] = 8943
         self.app.config['WTF_CSRF_ENABLED'] = False
@@ -79,13 +79,13 @@ class test_web(LiveServerTestCase):
             element = WebDriverWait(self.browser, 10).until(
                 EC.presence_of_element_located((By.ID, "1")))
 
+        finally:
             element.click()
             self.browser.find_element_by_id(u'btnSubmit').click()
             self.browser.implicitly_wait(5)
             alert = self.browser.switch_to.alert;
             alert.accept();
             self.browser.implicitly_wait(5)
-        finally:
             assert "Flask Intro - login page" in self.browser.title
 
 
