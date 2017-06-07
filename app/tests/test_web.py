@@ -32,7 +32,6 @@ class test_web(LiveServerTestCase):
 
     def populate(self):
         valid_user = User('illya', 'yurkevich','320880123',False)
-        valid_user_two = User('dani', 'shapira','305476384',False)
         valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
         db.session.add(valid_user)
         db.session.commit()
@@ -66,13 +65,13 @@ class test_web(LiveServerTestCase):
         assert "Flask Intro - login page" in self.browser.title
 
     def test_full_selenium(self):
-        self.valid_user = User('dani', 'shapira','305476384',False)
+        self.valid_user_two = User('dani', 'shapira','305476384',False)
         self.first_name = self.browser.find_element_by_id('first_name')
         self.last_name = self.browser.find_element_by_id('last_name')
         self.id_num = self.browser.find_element_by_id('id_number')
         self.login_button = self.browser.find_element_by_id('EnterBtn')
-        self.first_name.send_keys(self.valid_user.first_name)
-        self.last_name.send_keys(self.valid_user.last_name)
+        self.first_name.send_keys(self.valid_user_two.first_name)
+        self.last_name.send_keys(self.valid_user_two.last_name)
         self.id_num.send_keys('305476384')
         self.login_button.submit()
         print ('here '+self.browser.title)
