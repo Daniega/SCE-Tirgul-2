@@ -76,7 +76,7 @@ class test_web(LiveServerTestCase):
         self.login_button.submit()
         print ('here '+self.browser.title)
         try:
-            element = WebDriverWait(self.browser, 10).until(
+            element = WebDriverWait(self.browser, 20).until(
                 EC.presence_of_element_located((By.ID, "1")))
 
         finally:
