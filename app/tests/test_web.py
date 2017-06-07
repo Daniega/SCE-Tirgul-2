@@ -39,6 +39,7 @@ class test_web(LiveServerTestCase):
     def setUp(self):
         """Setup the test driver and create test users"""
         self.browser = webdriver.PhantomJS()
+        self.browser.set_window_size(1220,550)
         self.browser.get(self.get_server_url())
 
     def tearDown(self):
@@ -74,11 +75,11 @@ class test_web(LiveServerTestCase):
         self.last_name.send_keys(self.valid_user.last_name)
         self.id_num.send_keys('320880123')
         self.login_button.submit()
-        print ('here '+self.browser.title)
+        print ('here '+self.browser.current_url)
         wait = WebDriverWait(self.browser, 10)
         self.browser.get(self.get_server_url())
         self.browser.get(self.get_server_url())
-        element=wait.until(EC.presence_of_element_located(self.browser.find_element_by_id("1")))
+        element=wait.until(EC.presence_of_element_located((By.ID, "1")))
         element.click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
