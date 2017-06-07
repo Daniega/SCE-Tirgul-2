@@ -77,18 +77,17 @@ class test_web(LiveServerTestCase):
         print ('here '+self.browser.title)
         try:
             element = WebDriverWait(self.browser, 10).until(
-                EC.presence_of_element_located((By.ID, "1"))
-            )
+                EC.presence_of_element_located((By.ID, "1")))
+
+            element.click()
+            self.browser.find_element_by_id(u'btnSubmit').click()
+            self.browser.implicitly_wait(5)
+            alert = self.browser.switch_to.alert;
+            alert.accept();
+            self.browser.implicitly_wait(5)
+            assert "Flask Intro - login page" in self.browser.title
         finally:
             self.browser.quit()
-        element.click()
-        self.browser.find_element_by_id(u'btnSubmit').click()
-        self.browser.implicitly_wait(5)
-        alert = self.browser.switch_to.alert;
-        alert.accept();
-        self.browser.implicitly_wait(5)
-        assert "Flask Intro - login page" in self.browser.title
-
 
 
 
