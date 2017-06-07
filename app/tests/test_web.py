@@ -85,9 +85,8 @@ class test_web(LiveServerTestCase):
             alert = self.browser.switch_to.alert;
             alert.accept();
             self.browser.implicitly_wait(5)
-            assert "Flask Intro - login page" in self.browser.title
         finally:
-            self.browser.quit()
+            assert "Flask Intro - login page" in self.browser.title
 
 
 
