@@ -2,15 +2,14 @@
 import os
 import unittest
 
+from flask_testing import LiveServerTestCase
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-from flask_testing import LiveServerTestCase
-from selenium.webdriver.common.keys import Keys
 from app import app, db
 from app.models import User, Party
+from selenium.webdriver.common.by import By
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -22,7 +21,7 @@ class test_web(LiveServerTestCase):
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.app.config['LIVESERVER_PORT'] = 8943
         self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['SQLALCHEMY_DATABASnpmE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
+        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
         db.init_app(self.app)
         with self.app.app_context():  # app context
             db.drop_all()
@@ -76,12 +75,12 @@ class test_web(LiveServerTestCase):
         self.id_num.send_keys('320880123')
         self.login_button.submit()
         print ('here '+self.browser.title)
-        driver.implicitly_wait(10)  # seconds
-        element.click()
+        self.browser.implicitly_wait(10)
+        self.browser.find_element_by_id("1").click()
         self.browser.find_element_by_id(u'btnSubmit').click()
         self.browser.implicitly_wait(5)
-        alert = self.browser.switch_to.alert
-        alert.accept()
+        alert = self.browser.switch_to.alert;
+        alert.accept();
         self.browser.implicitly_wait(5)
         assert "Flask Intro - login page" in self.browser.title
 
