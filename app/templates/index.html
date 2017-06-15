@@ -22,7 +22,15 @@
             </div>
         {% endfor %}
             <div class="submitbote">
-            <button type="submit" id="btnSubmit" class="btn btn-primary" onclick="return confirm('are you sure?')">סיום</button>
+            <button type="submit" id="btnSubmit" class="btn btn-primary" onclick="Confirm()">סיום</button>
+                 <script type="text/javascript">
+                    function Confirm()
+                    {
+                        var x = confirm("are you sure");
+                        if (x) {document.getElementById("btnSubmit").type="submit";}
+                    }
+                </script>
+
             </div>
         </form>
     </div>
