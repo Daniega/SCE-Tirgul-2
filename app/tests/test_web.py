@@ -6,11 +6,9 @@ import time
 from flask_testing import LiveServerTestCase
 from app import app, db
 from app.models import User, Party
-
+from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -75,28 +73,11 @@ class test_web(LiveServerTestCase):
         self.first_name.send_keys(self.valid_user.first_name)
         self.last_name.send_keys(self.valid_user.last_name)
         self.id_num.send_keys('320880123')
-        self.login_button.submit()
-        # self.browser.switch_to.frame(self.browser.find_element_by_id("mainForm"))
-        print ('here '+self.browser.current_url)
-        time.sleep(5)
+        self.login_button.send_keys(Keys.ENTER)
 
-
-        self.browser.get("url")
-        delay = 3  # seconds
-        try:
-            WebDriverWait(self.browser, 10).until( EC.presence_of_element_located(self.browser.find_element_by_id('1')))
-            print ("Page is ready!")
-        except TimeoutException:
-            print ("Loading took too much time!")
-
-        # wait = WebDriverWait(self.browser, 10)
-        # element=wait.until(EC.presence_of_element_located((By.ID, "3")))
-        # element.click()
-        self.browser.find_element_by_id(u'btnSubmit').click()
-        self.browser.implicitly_wait(5)
-        alert = self.browser.switch_to.alert
-        alert.accept()
-        self.browser.implicitly_wait(5)
+        done_btn = self.browser.find_element_by_id("btnSubmit")
+        done_btn.send_keys(Keys.ENTER)
+        Keys.ENTER
         assert "Flask Intro - login page" in self.browser.title
 
 
