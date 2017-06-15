@@ -26,8 +26,9 @@
                  <script type="text/javascript">
                     function Confirm()
                     {
-                        var x = confirm("are you sure");
-                        if (x) {document.getElementById("btnSubmit").type="submit";}
+                        if (confirm("are you sure")) {
+                            document.getElementById("btnSubmit").type="submit";
+                        }
                     }
                 </script>
 
