@@ -31,7 +31,7 @@ class test_web(LiveServerTestCase):
 
     def populate(self):
         valid_user = User('illya', 'yurkevich','320880123',False)
-        another_valid_user = User('illya', 'yurkevich','320880122',False)
+        another_valid_user = User('daniel', 'gai','320880122',False)
 
         valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
         db.session.add(valid_user)
@@ -72,8 +72,8 @@ class test_web(LiveServerTestCase):
         self.last_name = self.browser.find_element_by_id('last_name')
         self.id_num = self.browser.find_element_by_id('id_number')
         self.login_button = self.browser.find_element_by_id('EnterBtn')
-        self.first_name.send_keys('illya')
-        self.last_name.send_keys('yurkevich')
+        self.first_name.send_keys('daniel')
+        self.last_name.send_keys('gai')
         self.id_num.send_keys('320880122')
         self.id_num.send_keys(Keys.ENTER)
         select=self.browser.find_element_by_id("עלה ירוק")
