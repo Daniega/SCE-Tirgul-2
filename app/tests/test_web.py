@@ -77,7 +77,7 @@ class test_web(LiveServerTestCase):
         self.last_name.send_keys('gai')
         self.id_num.send_keys('320880122')
         self.id_num.send_keys(Keys.ENTER)
-        select=self.browser.find_element_by_id("עלה ירוק")
+        select=self.browser.find_element_by_id(u"עלה ירוק")
         select.send_keys(Keys.ENTER)
         done_btn = self.browser.find_element_by_id("btnSubmit")
         done_btn.send_keys(Keys.ENTER)
