@@ -35,9 +35,8 @@ class SeleniumTest(LiveServerTestCase):
         db.session.commit()
  ##
     def setUp(self):
-        # create a new Firefox session
          self.browser = webdriver.PhantomJS()
-         # nevigate to the application home page
+
          self.browser.get(self.get_server_url())
 
     def test_correct_details(self):
@@ -51,10 +50,8 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys(Keys.ENTER)
         assert "Home" in self.browser.page_source
 
-        #browser.save_screenshot('correctDatails.png')
 
     def test_incorrect_details(self):
-        ################# Try to Get In with incorrect details ##########
         first_name_Input = self.browser.find_element_by_id("first_name")
         first_name_Input.send_keys("dani")
         last_name_Input = self.browser.find_element_by_id("last_name")
@@ -63,8 +60,7 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys("111")
         id_Input.send_keys(Keys.ENTER)
         assert "Home" not in self.browser.page_source
-        #browser.save_screenshot('incorrectDatails.png')
-        #################################################################
+
 
     def test_full_check(self):
         first_name_Input = self.browser.find_element_by_id("first_name")
