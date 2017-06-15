@@ -28,7 +28,7 @@ class SeleniumTest(LiveServerTestCase):
 
     def init_db(self):
         db.session.commit()
-        u = User('lilo', 'siksik', '66')
+        u = User('illya', 'yurkevich', '123')
         likud = Party(u'הליכוד','https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Likud_Logo.svg/250px-Likud_Logo.svg.png')
         db.session.add(u)
         db.session.add(likud)
@@ -44,11 +44,11 @@ class SeleniumTest(LiveServerTestCase):
     def test_correct_details(self):
         ################# Get In with correct details #################
         first_name_Input = self.browser.find_element_by_id("first_name")
-        first_name_Input.send_keys("lilo")
+        first_name_Input.send_keys("illya")
         last_name_Input = self.browser.find_element_by_id("last_name")
-        last_name_Input.send_keys("siksik")
-        id_Input = self.browser.find_element_by_id("user_id")
-        id_Input.send_keys("66")
+        last_name_Input.send_keys("yurkevich")
+        id_Input = self.browser.find_element_by_id("id_number")
+        id_Input.send_keys("123")
         id_Input.send_keys(Keys.ENTER)
         assert self.str not in self.browser.page_source
 
@@ -57,11 +57,11 @@ class SeleniumTest(LiveServerTestCase):
     def test_incorrect_details(self):
         ################# Try to Get In with incorrect details ##########
         first_name_Input = self.browser.find_element_by_id("first_name")
-        first_name_Input.send_keys("lilo")
+        first_name_Input.send_keys("dani")
         last_name_Input = self.browser.find_element_by_id("last_name")
-        last_name_Input.send_keys("horesh")
-        id_Input = self.browser.find_element_by_id("user_id")
-        id_Input.send_keys("222")
+        last_name_Input.send_keys("shapi")
+        id_Input = self.browser.find_element_by_id("id_number")
+        id_Input.send_keys("111")
         id_Input.send_keys(Keys.ENTER)
         assert self.str in self.browser.page_source
         #browser.save_screenshot('incorrectDatails.png')
@@ -69,15 +69,15 @@ class SeleniumTest(LiveServerTestCase):
 
     def test_full_check(self):
         first_name_Input = self.browser.find_element_by_id("first_name")
-        first_name_Input.send_keys("lilo")
+        first_name_Input.send_keys("illya")
         last_name_Input = self.browser.find_element_by_id("last_name")
-        last_name_Input.send_keys("siksik")
-        id_Input = self.browser.find_element_by_id("user_id")
-        id_Input.send_keys("66")
+        last_name_Input.send_keys("yurkevich")
+        id_Input = self.browser.find_element_by_id("id_number")
+        id_Input.send_keys("123")
         id_Input.send_keys(Keys.ENTER)
-        radio = self.browser.find_element_by_id("הליכוד")
-        self.browser.execute_script("arguments[0].click();", radio)
-        done_btn = self.browser.find_element_by_id("btn")
+        select = self.browser.find_element_by_id("הליכוד")
+        select.send_keys(Keys.ENTER)
+        done_btn = self.browser.find_element_by_id("('EnterBtn')")
         done_btn.send_keys(Keys.ENTER)
         Keys.ENTER
         assert "ברוכים הבאים" in self.browser.page_source
