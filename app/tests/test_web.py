@@ -69,6 +69,7 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys("123")
         id_Input.send_keys(Keys.ENTER)
         select = self.browser.find_element_by_id("הליכוד")
+        self.browser.implicitly_wait(2)
         select.click()
         done_btn = self.browser.find_element_by_id('EnterBtn')
         done_btn.send_keys(Keys.ENTER)
