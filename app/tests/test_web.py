@@ -36,11 +36,9 @@ class SeleniumTest(LiveServerTestCase):
  ##
     def setUp(self):
          self.browser = webdriver.PhantomJS()
-
          self.browser.get(self.get_server_url())
 
-    def test_correct_details(self):
-        ################# Get In with correct details #################
+    def test_correct(self):
         first_name_Input = self.browser.find_element_by_id("first_name")
         first_name_Input.send_keys("illya")
         last_name_Input = self.browser.find_element_by_id("last_name")
@@ -51,7 +49,7 @@ class SeleniumTest(LiveServerTestCase):
         assert "Home" in self.browser.page_source
 
 
-    def test_incorrect_details(self):
+    def test_incorrect(self):
         first_name_Input = self.browser.find_element_by_id("first_name")
         first_name_Input.send_keys("dani")
         last_name_Input = self.browser.find_element_by_id("last_name")
