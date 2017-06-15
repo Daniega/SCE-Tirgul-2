@@ -39,7 +39,6 @@ class SeleniumTest(LiveServerTestCase):
          self.browser = webdriver.PhantomJS()
          # nevigate to the application home page
          self.browser.get(self.get_server_url())
-         self.str = 'המצביע אינו מופיע בבסיס הנתונים או שכבר הצביע'
 
     def test_correct_details(self):
         ################# Get In with correct details #################
@@ -50,7 +49,7 @@ class SeleniumTest(LiveServerTestCase):
         id_Input = self.browser.find_element_by_id("id_number")
         id_Input.send_keys("123")
         id_Input.send_keys(Keys.ENTER)
-        assert self.str not in self.browser.page_source
+        assert "Home" in self.browser.page_source
 
         #browser.save_screenshot('correctDatails.png')
 
@@ -63,7 +62,7 @@ class SeleniumTest(LiveServerTestCase):
         id_Input = self.browser.find_element_by_id("id_number")
         id_Input.send_keys("111")
         id_Input.send_keys(Keys.ENTER)
-        assert self.str in self.browser.page_source
+        assert "Home" not in self.browser.page_source
         #browser.save_screenshot('incorrectDatails.png')
         #################################################################
 
@@ -80,7 +79,7 @@ class SeleniumTest(LiveServerTestCase):
         done_btn = self.browser.find_element_by_id("('EnterBtn')")
         done_btn.send_keys(Keys.ENTER)
         Keys.ENTER
-        assert "ברוכים הבאים" in self.browser.page_source
+        assert "Flask Intro - login page" in self.browser.page_source
 
 
 
