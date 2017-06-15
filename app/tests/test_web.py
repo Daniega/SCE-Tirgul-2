@@ -70,7 +70,7 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys(Keys.ENTER)
         select = self.browser.find_element_by_id("הליכוד")
         self.browser.execute_script("arguments[0].click();", select)
-        done_btn = self.browser.find_element_by_id('EnterBtn')
+        done_btn = self.browser.find_element_by_id('btnSubmit')
         done_btn.send_keys(Keys.ENTER)
         Keys.ENTER
         assert "Flask Intro - login page" in self.browser.page_source
