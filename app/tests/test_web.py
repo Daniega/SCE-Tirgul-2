@@ -60,7 +60,7 @@ class SeleniumTest(LiveServerTestCase):
         assert "Home" not in self.browser.page_source
 
 
-    def test_full_check(self):
+    def test_full(self):
         first_name_Input = self.browser.find_element_by_id("first_name")
         first_name_Input.send_keys("illya")
         last_name_Input = self.browser.find_element_by_id("last_name")
@@ -69,7 +69,7 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys("123")
         id_Input.send_keys(Keys.ENTER)
         select = self.browser.find_element_by_id("הליכוד")
-        select.send_keys(Keys.ENTER)
+        select.click()
         done_btn = self.browser.find_element_by_id('EnterBtn')
         done_btn.send_keys(Keys.ENTER)
         Keys.ENTER
