@@ -1,14 +1,13 @@
 import os
 import unittest
-
 import selenium
+from app.models import User, Party
+from app import app , db
+import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from flask import Flask
 from flask_testing import LiveServerTestCase
-from app.models import User, Party
-from app import app , db
-import time
 
 
 
@@ -59,7 +58,6 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys(Keys.ENTER)
         assert "Home" not in self.browser.page_source
 
-
     def test_full(self):
         first_name_Input = self.browser.find_element_by_id("first_name")
         first_name_Input.send_keys("illya")
@@ -74,8 +72,6 @@ class SeleniumTest(LiveServerTestCase):
         done_btn.send_keys(Keys.ENTER)
         Keys.ENTER
         assert "Flask Intro - login page" in self.browser.page_source
-
-
 
     def tearDown(self):
         self.browser.quit()
