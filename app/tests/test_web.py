@@ -1,92 +1,94 @@
-# -*- coding: utf-8 -*-
 import os
 import unittest
-import time
 
-from flask_testing import LiveServerTestCase
-from app import app, db
-from app.models import User, Party
-from selenium.webdriver.common.keys import Keys
+import selenium
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from flask import Flask
+from flask_testing import LiveServerTestCase
+from app.models import User, Party
+from app import app , db
 
 
 
-basedir = os.path.abspath(os.path.dirname(__file__))
 
-class test_web(LiveServerTestCase):
+class SeleniumTest(LiveServerTestCase):
+    SQLALCHEMY_DATABASE_URI = "sqlite://"
+    TESTING = True
+
     def create_app(self):
-        self.app = app
-        self.app.config['TESTING'] = True
-        self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['LIVESERVER_PORT'] = 5000
-        self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir,'test.db')  # 'sqlite:///:memory:'
-        db.init_app(self.app)
-        with self.app.app_context():  # app context
-            db.drop_all()
+        app.config['TESTING'] = True
+        app.config['LIVESERVER_PORT'] = 8943
+        app.config['LIVESERVER_TIMEOUT'] = 10
+        db.init_app(app)
+        with app.app_context():
             db.create_all()
-            self.populate()
+            self.init_db()
+        return app
 
-        return self.app
-
-    def populate(self):
-        valid_user = User('illya', 'yurkevich','320880123',False)
-        another_valid_user = User('daniel', 'gai','320880122',False)
-
-        valid_party = Party(u'הליכוד', 'static/images/yarok.jpeg', 0)
-        db.session.add(valid_user)
-        db.session.add(another_valid_user)
+    def init_db(self):
         db.session.commit()
-
+        u = User('lilo', 'siksik', '66')
+        likud = Party(u'הליכוד','https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Likud_Logo.svg/250px-Likud_Logo.svg.png')
+        db.session.add(u)
+        db.session.add(likud)
+        db.session.commit()
+ ##
     def setUp(self):
-        """Setup the test driver and create test users"""
-        self.browser = webdriver.PhantomJS()
-        self.browser.set_window_size(1220,550)
-        self.browser.get(self.get_server_url())
+        # create a new Firefox session
+         self.browser = webdriver.PhantomJS()
+         # nevigate to the application home page
+         self.browser.get(self.get_server_url())
+         self.str = 'המצביע אינו מופיע בבסיס הנתונים או שכבר הצביע'
+
+    def test_correct_details(self):
+        ################# Get In with correct details #################
+        first_name_Input = self.browser.find_element_by_id("first_name")
+        first_name_Input.send_keys("lilo")
+        last_name_Input = self.browser.find_element_by_id("last_name")
+        last_name_Input.send_keys("siksik")
+        id_Input = self.browser.find_element_by_id("user_id")
+        id_Input.send_keys("66")
+        id_Input.send_keys(Keys.ENTER)
+        assert self.str not in self.browser.page_source
+
+        #browser.save_screenshot('correctDatails.png')
+
+    def test_incorrect_details(self):
+        ################# Try to Get In with incorrect details ##########
+        first_name_Input = self.browser.find_element_by_id("first_name")
+        first_name_Input.send_keys("lilo")
+        last_name_Input = self.browser.find_element_by_id("last_name")
+        last_name_Input.send_keys("horesh")
+        id_Input = self.browser.find_element_by_id("user_id")
+        id_Input.send_keys("222")
+        id_Input.send_keys(Keys.ENTER)
+        assert self.str in self.browser.page_source
+        #browser.save_screenshot('incorrectDatails.png')
+        #################################################################
+
+    def test_full_check(self):
+        first_name_Input = self.browser.find_element_by_id("first_name")
+        first_name_Input.send_keys("lilo")
+        last_name_Input = self.browser.find_element_by_id("last_name")
+        last_name_Input.send_keys("siksik")
+        id_Input = self.browser.find_element_by_id("user_id")
+        id_Input.send_keys("66")
+        id_Input.send_keys(Keys.ENTER)
+        radio = self.browser.find_element_by_id("הליכוד")
+        self.browser.execute_script("arguments[0].click();", radio)
+        done_btn = self.browser.find_element_by_id("btn")
+        done_btn.send_keys(Keys.ENTER)
+        Keys.ENTER
+        assert "ברוכים הבאים" in self.browser.page_source
+
+
 
     def tearDown(self):
         self.browser.quit()
+        with app.app_context():
+            db.drop_all()
+            db.session.remove()
 
-    def test_login_selenium(self):
-        self.valid_user = User('illya', 'yurkevich','320880123',False)
-        self.first_name = self.browser.find_element_by_id('first_name')
-        self.last_name = self.browser.find_element_by_id('last_name')
-        self.id_num = self.browser.find_element_by_id('id_number')
-        self.login_button = self.browser.find_element_by_id('EnterBtn')
-        self.first_name.send_keys(self.valid_user.first_name)
-        self.last_name.send_keys(self.valid_user.last_name)
-        self.id_num.send_keys('320880123')
-        self.login_button.submit()
-        print(self.browser.title)
-        assert 'Home' in self.browser.title
-
-    def test_noSuchUser_selenium(self):
-        self.browser.find_element_by_xpath('//*[@id="first_name"]').send_keys('no')
-        self.browser.find_element_by_xpath('//*[@id="last_name"]').send_keys('such')
-        self.browser.find_element_by_xpath('//*[@id="id_number"]').send_keys('user')
-        self.browser.find_element_by_xpath('//*[@id="EnterBtn"]').click()
-        assert "Flask Intro - login page" in self.browser.title
-
-    def test_full_selenium(self):
-        another_valid_user = User('daniel', 'gai','320880122',False)
-        self.first_name = self.browser.find_element_by_id('first_name')
-        self.last_name = self.browser.find_element_by_id('last_name')
-        self.id_num = self.browser.find_element_by_id('id_number')
-        self.login_button = self.browser.find_element_by_id('EnterBtn')
-        self.first_name.send_keys('daniel')
-        self.last_name.send_keys('gai')
-        self.id_num.send_keys('320880122')
-        self.id_num.send_keys(Keys.ENTER)
-        select=self.browser.find_element_by_id('הליכוד')
-        select.send_keys(Keys.ENTER)
-        done_btn = self.browser.find_element_by_id("btnSubmit")
-        done_btn.send_keys(Keys.ENTER)
-        Keys.ENTER
-        assert "Flask Intro - login page" in self.browser.title
-
-
-
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
