@@ -8,7 +8,7 @@ from flask import Flask
 from flask_testing import LiveServerTestCase
 from app.models import User, Party
 from app import app , db
-
+import time
 
 
 
@@ -69,7 +69,9 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys("123")
         id_Input.send_keys(Keys.ENTER)
         select = self.browser.find_element_by_id("הליכוד")
+        print self.browser.current_url()
         self.browser.implicitly_wait(2)
+        time.sleep(3)
         select.click()
         done_btn = self.browser.find_element_by_id('EnterBtn')
         done_btn.send_keys(Keys.ENTER)
