@@ -35,7 +35,7 @@ class test_web(LiveServerTestCase):
 
         valid_party = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
         db.session.add(valid_user)
-        db.session.add()
+        db.session.add(another_valid_user)
         db.session.commit()
 
     def setUp(self):
