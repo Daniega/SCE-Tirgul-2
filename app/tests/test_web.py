@@ -69,7 +69,7 @@ class SeleniumTest(LiveServerTestCase):
         id_Input.send_keys("123")
         id_Input.send_keys(Keys.ENTER)
         select = self.browser.find_element_by_id("הליכוד")
-        print self.browser.current_url()
+        print (self.browser.current_url())
         self.browser.implicitly_wait(2)
         time.sleep(3)
         select.click()
