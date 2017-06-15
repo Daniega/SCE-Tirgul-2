@@ -33,7 +33,7 @@ class test_web(LiveServerTestCase):
         valid_user = User('illya', 'yurkevich','320880123',False)
         another_valid_user = User('daniel', 'gai','320880122',False)
 
-        valid_party = Party('עלה ירוק', 'static/images/yarok.jpeg', 0)
+        valid_party = Party(u'הליכוד', 'static/images/yarok.jpeg', 0)
         db.session.add(valid_user)
         db.session.add(another_valid_user)
         db.session.commit()
@@ -77,7 +77,7 @@ class test_web(LiveServerTestCase):
         self.last_name.send_keys('gai')
         self.id_num.send_keys('320880122')
         self.id_num.send_keys(Keys.ENTER)
-        select=self.browser.find_element_by_id("עלה ירוק")
+        select=self.browser.find_element_by_id('הליכוד')
         select.send_keys(Keys.ENTER)
         done_btn = self.browser.find_element_by_id("btnSubmit")
         done_btn.send_keys(Keys.ENTER)
