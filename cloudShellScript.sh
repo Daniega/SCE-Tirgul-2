@@ -1,33 +1,21 @@
-!#/bin/bash
+#!/bin/bash
 
-#make sudo everything
-sudo -s
+sudo yum -y update && upgrade
 
-#update everything
-yum -y update && upgrade
+sudo yum -y install git-all centos-relese-SCL python-setuptools python-setuptools-devel python-devel
+sudo yum -y groupinstall "Development Tools"
 
-#install python
-yum install python -y
+sudo easy_install pip
 
-#get pip
-wget https://bootstrap.pypa.io/get-pip.py
-#install pip
-python2.7 get-pip.py
-#install git
-yum install git -y
-
-git clone https://github.com/Daniega/SCE-Tirgul-2.git
-
+https://github.com/Daniega/SCE-Tirgul-2.git
 cd SCE-Tirgul-2
 
-#install our app requirements
-pip install -r requirements.txt
-
-#stop sudo privileges
-exit
-
-
-#app run:
+sudo pip install -r requirements.txt
 
 python db_create.py
-python run.py
+
+#redirects all traffic from port 80 to 5000
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 5000
+
+#run app
+nohup python run.py > ../log.txt 2>&1 </dev/null &
