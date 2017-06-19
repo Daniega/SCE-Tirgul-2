@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c757aba-835e-440b-a787-b571855cd428" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cloudshell_api.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RunSessionClousShell.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/api/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/api/cloudshell_api.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/api/common_cloudshell_api.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/helpers/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/helpers/scripts/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/helpers/scripts/cloudshell_dev_helpers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cloudshell/helpers/scripts/cloudshell_scripts_helpers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config.sh" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudShellScript.sh" afterPath="$PROJECT_DIR$/cloudShellScript.sh" />
     </list>
@@ -106,21 +95,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cloudShellScript.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cloudShellScript.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloudShellScript.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cloudshell_api.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cloudshell_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cloudshell_api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+              <caret line="15" column="67" lean-forward="true" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
               </folding>
@@ -214,8 +203,8 @@
         <option value="$PROJECT_DIR$/app/static/all.css" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/tests/test_web.py" />
-        <option value="$PROJECT_DIR$/cloudShellScript.sh" />
         <option value="$PROJECT_DIR$/cloudshell_api.py" />
+        <option value="$PROJECT_DIR$/cloudShellScript.sh" />
       </list>
     </option>
   </component>
@@ -577,20 +566,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491130585517</updated>
     </task>
-    <task id="LOCAL-00263" summary="build #9324923942394392">
-      <created>1496841149271</created>
-      <option name="number" value="00263" />
-      <option name="presentableId" value="LOCAL-00263" />
-      <option name="project" value="LOCAL" />
-      <updated>1496841149271</updated>
-    </task>
-    <task id="LOCAL-00264" summary="build #9324923942394392">
-      <created>1496841266067</created>
-      <option name="number" value="00264" />
-      <option name="presentableId" value="LOCAL-00264" />
-      <option name="project" value="LOCAL" />
-      <updated>1496841266067</updated>
-    </task>
     <task id="LOCAL-00265" summary="build #9324923942394392">
       <created>1496841336945</created>
       <option name="number" value="00265" />
@@ -920,7 +895,21 @@
       <option name="project" value="LOCAL" />
       <updated>1497527795920</updated>
     </task>
-    <option name="localTasksCounter" value="312" />
+    <task id="LOCAL-00312" summary="build #9324923942394392">
+      <created>1497855481767</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1497855481767</updated>
+    </task>
+    <task id="LOCAL-00313" summary="build #9324923942394392">
+      <created>1497855501261</created>
+      <option name="number" value="00313" />
+      <option name="presentableId" value="LOCAL-00313" />
+      <option name="project" value="LOCAL" />
+      <updated>1497855501261</updated>
+    </task>
+    <option name="localTasksCounter" value="314" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1370,21 +1359,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloudShellScript.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cloudshell_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+          <caret line="15" column="67" lean-forward="true" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloudShellScript.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
