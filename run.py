@@ -1,7 +1,4 @@
-from app import app
-from app import db
-from db_create import db_create
+from flask import url_for
 
-db.drop_all()
-db_create(db)
+from app import app
 app.run(host='0.0.0.0',debug=True)
