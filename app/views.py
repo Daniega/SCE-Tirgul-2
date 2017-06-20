@@ -67,10 +67,6 @@ def login():
 
     return render_template('login.html', error=error), 200
 
-<<<<<<< HEAD
-=======
-    return render_template('login.html', error=error)
->>>>>>> origin/master
 
 
 ## will handle the logout request
