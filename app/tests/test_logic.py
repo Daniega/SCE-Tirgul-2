@@ -27,6 +27,7 @@ class myTest(unittest.TestCase):
         invalid_login = self.tester.post('login', data=dict(first_name='illya', last_name='yurkevich', id_number=''),
                                          follow_redirects=True)
         self.assertEqual(invalid_login.status_code, 404)
+
         assert 'המצביע אינו מופיע בבסיס הנתונים'.encode('utf-8') in invalid_login.data
 
     def test_WrongUser(self):
@@ -37,6 +38,7 @@ class myTest(unittest.TestCase):
         invalid_login = self.tester.post('login', data=dict(first_name='someone', last_name='unknown', id_number='666'),
                                          follow_redirects=True)
         self.assertEqual(invalid_login.status_code, 404)
+
         assert 'המצביע אינו מופיע בבסיס הנתונים'.encode('utf-8') in invalid_login.data
 
 
