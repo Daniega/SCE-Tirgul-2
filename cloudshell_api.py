@@ -24,6 +24,6 @@ if len(my_resource) == 0:
 resource_att = session.GetResourceDetails(my_resource[0].Name).ResourceAttributes
 for item in resource_att:
     if item.Name == 'Public IP':
-	print (item.value)
+	print (item.Value)
         break
    
