@@ -62,8 +62,15 @@ def login():
                         return redirect(url_for('index'))
 
             error = u'המצביע אינו מופיע בבסיס הנתונים'
+    if error is not None:
+        return render_template('login.html', error=error), 404
 
-    return render_template('login.html', error=error), 404
+    return render_template('login.html', error=error), 200
+
+<<<<<<< HEAD
+=======
+    return render_template('login.html', error=error)
+>>>>>>> origin/master
 
 
 ## will handle the logout request
