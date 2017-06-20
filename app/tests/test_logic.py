@@ -23,11 +23,11 @@ class LoginTestCase(unittest.TestCase):
 
     def test_manager_page(self):
         response = self.tester.get('/app/manager')
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 400)
 
     def test_no_id_login(self):
         response = self.tester.post('login', data=dict(first_name='myname', last_name='mylastname'))
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 400)
         err = "Invalid form"
         assert err in response.data
 
@@ -35,13 +35,13 @@ class LoginTestCase(unittest.TestCase):
         credentials = {'first_name': 'unexisting', 'last_name': 'lastname', 'id_num': 1234}
         response = self.tester.post('login', data=credentials,
                                     follow_redirects=True)
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 400)
         err = "User doesnt exist in the system"
         resp = response.data
         assert err in resp
 
     def test_valid_user(self):
-        credentials = {'first_name': 'tomer', 'last_name': 'admon', 'id_num': 123456}
+        credentials = {'first_name': 'tomer', 'last_name': 'admon', 'id_num': 1234567}
         response = self.tester.post('login', data=credentials,
                                     follow_redirects=False)
         self.assertEqual(response.status_code, 302)
