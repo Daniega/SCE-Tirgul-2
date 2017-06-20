@@ -26,3 +26,10 @@ print (my_resource[0].Name)
 print (my_resource[0].FullAddress)
 print (my_resource[0].FolderFullPath )
 print (my_resource[0].Shared)
+
+resource_att = session.GetResourceDetails(my_resource[0].Name).ResourceAttributes
+for item in resource_att:
+    if item.Name == 'Public IP':
+	sys.stdout.write(item.Value)
+        break
+   
