@@ -1,75 +1,57 @@
 # -*- coding: utf-8 -*-
-import os
 import unittest
 
-from app import app, db
-from app.models import User, Party
-from flask_config import basedir
+from app import app
+from app.tests import test_db
+from db_create import db_create
 
-basedir = os.path.abspath(os.path.dirname(__file__))
 
-class LoginTestCase(unittest.TestCase):
-    def setUp(self):
-        self.app = app
-        self.app.config['WTF_CSRF_ENABLED'] = False
-        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'test.db')
-        self.tester = self.app.test_client(self)
-        self.tester.testing = True
-        db.init_app(self.app)
-        with self.app.app_context():
-            db.drop_all()
-            db.create_all()
-            self.populate_db()
+class myTest(unittest.TestCase):
 
-    def test_manager_page(self):
-        response = self.tester.get('/app/manager')
-        self.assertEqual(response.status_code, 400)
+    def create_app(self):
+        return app
 
-    def test_no_id_login(self):
-        response = self.tester.post('login', data=dict(first_name='myname', last_name='mylastname'))
-        self.assertEqual(response.status_code, 400)
-        err = "Invalid form"
-        assert err in response.data
-
-    def test_invalid_user(self):
-        credentials = {'first_name': 'unexisting', 'last_name': 'lastname', 'id_num': 1234}
-        response = self.tester.post('login', data=credentials,
-                                    follow_redirects=True)
-        self.assertEqual(response.status_code, 400)
-        err = "User doesnt exist in the system"
-        resp = response.data
-        assert err in resp
-
-    def test_valid_user(self):
-        credentials = {'first_name': 'tomer', 'last_name': 'admon', 'id_num': 1234567}
-        response = self.tester.post('login', data=credentials,
-                                    follow_redirects=False)
+    def auth_test(self):
+        response = self.tester.get('/secret', content_type='application/json')
+        # should return status code 302
         self.assertEqual(response.status_code, 302)
-        assert "index" in response.location
 
-    def test_valid_user_already_voted(self):
-        credentials = {'first_name': 'illya', 'last_name': 'yur', 'id_num': 1234567}
-        response = self.tester.post('login', data=credentials,
-                                    follow_redirects=True)
-        self.assertEqual(response.status_code, 404)
-        err = "User already voted"
-        assert err in response.data
+    def test_login(self):
+        # Check if form visible
+        login_page = self.tester.get('/login')
+        assert 'first_name'.encode('utf-8') in login_page.data
+        assert 'last_name'.encode('utf-8') in login_page.data
+        assert 'id_number'.encode('utf-8') in login_page.data
 
-    def populate_db(self):
-        db.session.commit()
+        # Check if id is missing
+        invalid_login = self.tester.post('login', data=dict(first_name='illya', last_name='yurkevich', id_number=''),
+                                         follow_redirects=True)
+        self.assertEqual(invalid_login.status_code, 404)
 
-        admon = User(123456, 'tomer', 'admon', False)
-        max = User(1234567, 'illya', 'yur', True)
-        yarok = Party(u'עלה ירוק', 'static/images/yarok.jpeg', 0)
-        db.session.add(yarok)
-        db.session.add(admon)
-        db.session.add(max)
-        db.session.commit()
+        assert 'המצביע אינו מופיע בבסיס הנתונים'.encode('utf-8') in invalid_login.data
+
+    def test_WrongUser(self):
+        login_page = self.tester.get('/login')
+        assert 'first_name'.encode('utf-8') in login_page.data
+        assert 'last_name'.encode('utf-8') in login_page.data
+        assert 'id_number'.encode('utf-8') in login_page.data  # check if user exist
+        invalid_login = self.tester.post('login', data=dict(first_name='someone', last_name='unknown', id_number='666'),
+                                         follow_redirects=True)
+        self.assertEqual(invalid_login.status_code, 404)
+
+        assert 'המצביע אינו מופיע בבסיס הנתונים'.encode('utf-8') in invalid_login.data
+
+
+    def setUp(self):
+        self.tester = app.test_client(self)
+        test_db.drop_all()
+        db_create(test_db)
+        self.tester.testing = True
 
     def tearDown(self):
-        db.init_app(self.app)
-        with self.app.app_context():
-            db.drop_all()
+        test_db.drop_all()
+        test_db.session.remove()
+
 
 if __name__ == '__main__':
     unittest.main()
