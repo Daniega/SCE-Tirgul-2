@@ -2,7 +2,7 @@
 import unittest
 
 from app import app
-from app.tests import test_db
+from app import db
 from db_create import db_create
 
 
@@ -44,13 +44,13 @@ class myTest(unittest.TestCase):
 
     def setUp(self):
         self.tester = app.test_client(self)
-        test_db.drop_all()
-        db_create(test_db)
+        db.drop_all()
+        db_create(db)
         self.tester.testing = True
 
     def tearDown(self):
-        test_db.drop_all()
-        test_db.session.remove()
+        db.drop_all()
+        db.session.remove()
 
 
 if __name__ == '__main__':
